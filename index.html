@@ -1,232 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rohan Venkatesha's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="center">
+      <a href="https://rohanvenkatesha.github.io/" target="_blank">
+        <img src="Hi I am Rohan Venkatesha Software Engineer_20241228_040050_0000.jpg" alt="Hi, I am Rohan Venkatesha">
+      </a>
+    </div>
+  </header>
 
-    <!--=============== UNICONS ===============-->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <section id="socials">
+    <h2>🌐 Socials</h2>
+    <div>
+      <a href="https://www.linkedin.com/in/rohan-venkatesha/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/rohanvenkatesha/" target="_blank">GitHub</a>
+    </div>
+  </section>
 
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/css/styles.css" />
+  <section id="tech-stack">
+    <h2>💻 Tech Stack</h2>
+    <div class="languages">
+      <h3>Languages:</h3>
+      <p>Python, C, C++, Shell, HTML, CSS3, PHP, JavaScript, SQL</p>
+    </div>
+    <div class="tools">
+      <h3>Technologies & Tools:</h3>
+      <p>Docker, Kubernetes, Jenkins, Git, JIRA, AWS, GCP, Visual Studio, Google Colab</p>
+    </div>
+    <div class="skills">
+      <h3>Key Skills & Techniques:</h3>
+      <p>API Development, Cloud Computing, Microservices, DevOps, CI/CD, SDLC, Agile, Design Patterns</p>
+    </div>
+  </section>
 
-    <title>Portfolio Website</title>
-  </head>
-  <body>
-    <!--=============== HEADER ===============-->
-    <header class="header" id="header"></header>
+  <section id="stats">
+    <h2>📊 GitHub Stats</h2>
+    <div class="stats">
+      <img src="https://github-readme-stats.vercel.app/api?username=rohanvenkatesha&theme=dark" alt="GitHub Stats">
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=rohanvenkatesha&theme=dark" alt="Streak Stats">
+    </div>
+  </section>
 
-    <!--=============== MAIN ===============-->
-    <main class="main">
-      <!--=============== HOME ===============-->
-      <section class="home" id="home">
-        <div class ="home__container container grid">
-          <div class="home__content">
-            <!-- <span class="home__subtitle"> Welcome To My World</span> -->
-            <h1 class="home__title">
-              Hi, I am Rohan Venkatesha <span>Software Developer. </span>
-            </h1>
-          </div>
-          <img src="assets/img/home.jpg" alt="" class="home__img">
-        </div>
-      </section>
-
-      <!--=============== ABOUT ===============-->
-      <section class="about section" id="about">
-        <div class="about__container container grid">
-          <img src="assets/img/about.jpg" alt="" class="about__img">
-
-          <div class="about__content">
-            <h2 class="section__title">About Me</h2>
-
-            <!-- <p class="about__description">This is a smaple section About me</p> -->
-
-            <div class="tabs__btns">
-              <span class="tabs__btn tab__active" data-target="#skills">Main Skills</span>
-              <span class="tabs__btn" data-target="#experience">Experience</span>
-              <span class="tabs__btn" data-target="#education">Education</span>
-              <span class="tabs__btn" data-target="#award">Award</span>
-            </div>
-
-            <div class="tabs__content">
-              <div class="tabs__item tab__active" data-content id="skills">
-                <div class="tabs__data grid">
-                  <p class="tabs__description">
-                    <span>Software Engineering</span> - Backend & API Development
-                    <span>Python (Flask, Django, FastAPI), RESTful API design</span>
-                  </p>
-
-                  <p class="tabs__description">
-                    <span>Infrastructure Systems Engineering</span> - Cloud & On-Prem Deployments
-                    <span>AWS (S3, CLI), Google Cloud Platform, Docker, PowerShell, Shell Scripting, Git, GitHub, Jenkins, Oracle SQL, MySQL, SQL Server, JIRA, Agile</span>
-                  </p>
-
-                  <p class="tabs__description">
-                    <span>Artificial Intelligence & Machine Learning</span> - Computer Vision Techniques
-                    <span>YOLOv5, OpenCV, MediaPipe</span>
-                  </p>
-
-                  <p class="tabs__description">
-                    <span>Project Management</span> - Software Development Lifecycle (SDLC)
-                    <span>Agile Methodologies, Requirements Analysis, Client Communication, Use Cases, User Stories</span>
-                  </p>
-                </div>
-              </div>
-
-              <div class="tabs__item" data-content id="award">
-                <div class="tabs__data grid">
-                  <p class="tabs__description">
-                    <span>Insta Award</span> - Infosys Limited
-                    <span>2020</span>
-                  </p>
-
-                  <p class="tabs__description">
-                    <span>Open Day Project Exhibition (Runner Up)</span> - Global Academy of Technology
-                    <span>2017</span>
-                  </p>
-                </div>
-              </div>
-
-              <div class="tabs__item" data-content id="experience">
-                <div class="tabs__data grid">
-                  <p class="tabs__description">
-                    <span>Student Manager</span> - Western Michigan University
-                    <span>January 2024 - April 2025</span>
-                  </p>
-
-                  <p class="tabs__description">
-                    <span>Senior Software Engineer</span> - Adetrez Labs
-                    <span>August 2021 - March 2023</span>
-                  </p>
-
-                  <p class="tabs__description">
-                    <span>CRC Senior Associate</span> - Amazon Development Center
-                    <span>November 2021 - December 2021</span>
-                  </p>
-
-                  <p class="tabs__description">
-                    <span>Systems Engineer</span> - Infosys Limited
-                    <span>August 2019 - April 2021</span>
-                  </p>
-
-                  <p class="tabs__description">
-                    <span>Systems Engineer Trainee (Internship)</span> - Infosys Limited
-                    <span>January 2019 - May 2019</span>
-                  </p>
-
-                  <p class="tabs__description">
-                    <span>Software Developer (Internship)</span> - Xorail A Wabtec Company
-                    <span>July 2018 - November 2018</span>
-                  </p>
-
-                  <p class="tabs__description">
-                    <span>Internship</span> - Livewire India
-                    <span>August 2017 - August 2017</span>
-                  </p>
-                </div>
-              </div>
-
-              <div class="tabs__item" data-content id="education">
-                <div class="tabs__data grid">
-                  <p class="tabs__description">
-                    <span>Masters in Computer Science (GPA - 3.75)</span>
-                    <span>Western Michigan University, Kalamazoo, Michigan, USA</span>
-                    <span>2023-2025</span>
-                  </p>
-
-                  <p class="tabs__description">
-                    <span>Bachelor of Engineering in Computer Science & Engineering (GPA - 7.76)</span>
-                    <span>Visvesvaraya Technological University, Belgaum, India</span>
-                    <span>2015-2019</span>
-                  </p>
-                </div>
-              </div>
-
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--=============== SERVICES ===============-->
-      <section class="services section" id="services">
-        <h2 class="section__title">My Awesome Service</h2>
-        <p class="section__description">There are many variations of passages</p>
-
-        <div class="services__container container grid">
-          <div class="services__item">
-            <i class="uil uil-rss-interface services__icon"></i>
-
-            <h3 class="services__title">Business Strategy</h3>
-            <p class="services__description">
-              I throw myself down among the tall grass by the stream as I lie close to the earth
-            </p>
-          </div>
-
-          <div class="services__item">
-            <i class="uil uil-layer-group services__icon"></i>
-
-            <h3 class="services__title">Website Development</h3>
-            <p class="services__description">
-              I throw myself down among the tall grass by the stream as I lie close to the earth
-            </p>
-          </div>
-
-          <div class="services__item">
-            <i class="uil uil-users-alt services__icon"></i>
-
-            <h3 class="services__title">Marketing & Reporting</h3>
-            <p class="services__description">
-              I throw myself down among the tall grass by the stream as I lie close to the earth
-            </p>
-          </div>
-
-          <div class="services__item">
-            <i class="uil uil-desktop services__icon"></i>
-
-            <h3 class="services__title">Mobile Development</h3>
-            <p class="services__description">
-              I throw myself down among the tall grass by the stream as I lie close to the earth
-            </p>
-          </div>
-
-          <div class="services__item">
-            <i class="uil uil-rss-interface services__icon"></i>
-
-            <h3 class="services__title">Sales</h3>
-            <p class="services__description">
-              I throw myself down among the tall grass by the stream as I lie close to the earth
-            </p>
-          </div>
-
-          <div class="services__item">
-            <i class="uil uil-rss-interface services__icon"></i>
-
-            <h3 class="services__title">Photography</h3>
-            <p class="services__description">
-              I throw myself down among the tall grass by the stream as I lie close to the earth
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!--=============== PORTFOLIO ===============-->
-      <section class="portfolio section" id="portfolio"></section>
-
-      <!--=============== CONTACT ===============-->
-      <section class="contact section" id="contact"></section>
-    </main>
-
-    <!--=============== FOOTER ===============-->
-    <footer class="footer"></footer>
-
-    <!--=============== SCROLL UP ===============-->
-
-    <!--=============== EMAIL JS ===============-->
-    <script src=""></script>
-
-    <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
-  </body>
+  <footer>
+    <p>&copy; 2024 Rohan Venkatesha. Let's Connect!</p>
+  </footer>
+</body>
 </html>
