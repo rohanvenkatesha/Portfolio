@@ -1,6 +1,6 @@
 import React from 'react'
 import HeroContent from '../sub/HeroContent'
-import Star from 'next/script';
+// import Star from 'next/script';
 
 const Hero = () => {
   return (
