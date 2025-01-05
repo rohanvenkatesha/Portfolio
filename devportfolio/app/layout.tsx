@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}>
-          <StarsCanvas />
+          {/* <StarsCanvas /> */}
         {children}
       </body>
     </html>
