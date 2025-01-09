@@ -48,9 +48,9 @@ const HeroContent = () => {
         className='w-full h-full flex justify-center items-center'>
             <Image
             src='/home.jpg'
-            alt='work icons'
-            height={650}
-            width={650}
+            alt='profile picture'
+            height={420}
+            width={420}
             className='home__img'
             />
         </motion.div>
