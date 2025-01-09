@@ -67,3 +67,11 @@
 html {
   scroll-behavior: smooth;
 }
+
+.home__img {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  border: 2rem solid var(--container-color);
+
+}

@@ -11,7 +11,7 @@ const HeroContent = () => {
     initial="hidden"
     animate="visible"
     className='flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]'>
-        <div className='h-full w-full flex flex-col gap-5 justify-center m-auto text-start'>
+        <div className='h-full w-full flex flex-col gap-15 justify-center m-auto text-start'>
             {/* <motion.div
             variants={slideInFromTop}
             className='Welcome-box py-[9px] px-[7px] border border-[#7042f88b] opacity-[1]'>
@@ -51,6 +51,7 @@ const HeroContent = () => {
             alt='work icons'
             height={650}
             width={650}
+            className='home__img'
             />
         </motion.div>
     </motion.div>
