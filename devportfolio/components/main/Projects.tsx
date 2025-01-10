@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
 
   return (
     <div
-      className="w-full h-full flex flex-col items-center justify-center relative gap-3"
+      className="w-full h-full flex flex-col items-center justify-center relative gap-3 pt-20 py-20"
       id="projects">
       <StarryBackground />
        <motion.div
@@ -40,7 +40,7 @@ const Projects: React.FC = () => {
                 transition={{ duration: 0.8, ease: 'easeOut' }}
                 className="mb-6"
               >
-        <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+        <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10">
           My Projects
         </h1>
       </motion.div>
