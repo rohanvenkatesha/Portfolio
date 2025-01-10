@@ -29,14 +29,13 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${inter.className} bg-[#000000] overflow-y-scroll overflow-x-hidden`}>
-        {/* // className={`${geistSans.className} overflow-y-scroll overflow-x-hidden`}
-        // style={{ background: 'linear-gradient(to bottom,rgb(0, 0, 0),rgba(0, 0, 3, 0.82))' }}>
-        // className={`${geistSans.className} bg-gradient-to-b from-[#000000] to-[#1a1a1a] overflow-y-scroll overflow-x-hidden`}> */}
-        {/* <StarCanvas/> */}
- 
+        {/* // className={`${inter.className} overflow-y-scroll overflow-x-hidden`} */}
+        {/* // style={{ background: 'linear-gradient(to bottom,rgb(255, 1, 1),rgba(16, 16, 92, 0.82))' }}>  */}
+        {/* // className={`${inter.className} bg-gradient-to-b from-[#000000] to-[#1a1a1a] overflow-y-scroll overflow-x-hidden`}>  */}
         
-        <Navbar/>
         <StarryBackground />
+        <Navbar/>
+        
         {children}
       </body>
     </html>
