@@ -3,7 +3,7 @@ import { Backend_skill, Frontend_skill, Full_stack, Other_skill } from '@/consta
 import React from 'react'
 import SkillDataProvider from '../sub/SkillDataProvider';
 import SkillText from '../sub/SkillText';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 const Skills = () => {
   return (
@@ -53,7 +53,7 @@ const Skills = () => {
                 index={index}/>
             ))}
         </div>
-        <div className='w-full h-full absolute'>
+        {/* <div className='w-full h-full absolute'>
             <div className='w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover'>
             <Image 
                 src="/gg5.jpg" 
@@ -70,10 +70,8 @@ const Skills = () => {
             playsInline
             muted
             loop
-            src='/blackhole.webm'/> */}
-        </div>
-
-        
+            src='/blackhole.webm'/>
+        </div> */}
     </section>
   );
 };
