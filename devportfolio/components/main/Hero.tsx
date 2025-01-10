@@ -4,7 +4,7 @@ import HeroContent from '../sub/HeroContent'
 
 const Hero = () => {
   return (
-    <div className='relative flex flex-col h-full w-full'>
+    <div id="about-me" className='relative flex flex-col h-full w-full'>
         {/* <video
             autoPlay
             muted
@@ -13,11 +13,11 @@ const Hero = () => {
             >
                 <source src='/blackhole.webm' type='video/webm' />
             </video> */}
-            <img 
+            {/* <img 
     src="/gg5.jpg" 
     alt="Black Hole" 
     className="absolute inset-0 h-full w-full object-cover z-[1]"
-/>
+/> */}
 
             <HeroContent />
     </div>
