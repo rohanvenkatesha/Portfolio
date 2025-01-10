@@ -47,7 +47,8 @@ const HeroContent = () => {
             <motion.a
                 variants={slideInFromLeft(1)}
                 className="Welcome-box py-[9px] px-[7px] border border-[#7042f88b] opacity-[1] flex items-center"
-            >
+                href='https://drive.google.com/file/d/1zf7aHGIk7Qymr7dP7ilbvY25KHc0bVIb/view?usp=drive_link'
+            >   
                 <ArrowDownCircleIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
                 <h1 className="button text-center text-white cursor-pointer">Download Resume</h1>
             </motion.a>
