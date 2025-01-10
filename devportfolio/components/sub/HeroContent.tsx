@@ -2,7 +2,7 @@
 import React from 'react'
 import {motion} from 'framer-motion'
 import { slideInFromLeft, slideInFromRight, slideInFromTop} from '@/utils/motion'
-import { ShieldCheckIcon } from '@heroicons/react/24/solid'
+// import { ShieldCheckIcon } from '@heroicons/react/24/solid'
 import { ArrowDownCircleIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image';
 
