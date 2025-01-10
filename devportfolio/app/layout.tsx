@@ -3,10 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/main/Navbar";
 import StarryBackground from "@/components/main/StarryBackground";
-// import StarCanvas from "@/components/main/StarBackground";
-
-// import dynamic from 'next/dynamic';
-// const StarCanvas = dynamic(() => import('@/components/main/StarBackground'), { ssr: false });
 
 const inter = Inter({ subsets: ["latin"] });
 
