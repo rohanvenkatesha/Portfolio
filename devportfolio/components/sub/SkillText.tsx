@@ -15,9 +15,7 @@ export default function SkillText() {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="mb-8"
         >
-          <span className='text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500'>
-            My Skills
-          </span>
+          <span className='text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500'> Skills </span>
         </motion.div>
       </div>
     );

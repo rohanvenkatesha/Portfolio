@@ -12,7 +12,7 @@ const HeroContent = () => {
     initial="hidden"
     animate="visible"
     className='flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]'>
-        <div className='h-full w-full flex flex-col gap-15 justify-center m-auto text-start'>
+        <div className='h-full w-full flex flex-col gap-5 justify-center m-auto text-start'>
             {/* <motion.div
             variants={slideInFromTop}
             className='Welcome-box py-[9px] px-[7px] border border-[#7042f88b] opacity-[1]'>
@@ -32,7 +32,8 @@ const HeroContent = () => {
             <motion.p
             variants={slideInFromLeft(0.8)}
             className='text-lg text-gray-400 my-5 max-w-[600px]'>
-                I have 4+ years of experience in backend & API development, infrastructure systems engineering, and cloud & on-prem deployments. Passionate about building scalable software solutions and delivering high-impact results using Python and modern technologies.
+               I have 4+ years of experience in backend & API development, infrastructure systems engineering, and cloud & on-prem deployments. 
+               Passionate about building scalable software solutions and delivering results using Python and modern technologies.
             </motion.p>
             {/* <motion.a
             variants={slideInFromLeft(1)}
@@ -66,8 +67,8 @@ const HeroContent = () => {
             <Image
             src='/home.jpg'
             alt='profile picture'
-            height={420}
-            width={420}
+            height={350}
+            width={350}
             className='home__img'
             />
         </motion.div>
