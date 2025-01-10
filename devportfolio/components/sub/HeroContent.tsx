@@ -1,8 +1,9 @@
 "use client"
 import React from 'react'
 import {motion} from 'framer-motion'
-import { slideInFromLeft, slideInFromRight} from '@/utils/motion'
+import { slideInFromLeft, slideInFromRight, slideInFromTop} from '@/utils/motion'
 import { ShieldCheckIcon } from '@heroicons/react/24/solid'
+import { ArrowDownCircleIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image';
 
 const HeroContent = () => {
@@ -33,14 +34,30 @@ const HeroContent = () => {
             className='text-lg text-gray-400 my-5 max-w-[600px]'>
                 I have 4+ years of experience in backend & API development, infrastructure systems engineering, and cloud & on-prem deployments. Passionate about building scalable software solutions and delivering high-impact results using Python and modern technologies.
             </motion.p>
-            <motion.a
+            {/* <motion.a
             variants={slideInFromLeft(1)}
             // className='py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]'>
             //     Learn More!
             // </motion.a>
             className='Welcome-box py-[9px] px-[7px] border border-[#7042f88b] opacity-[1]'>
                 <ShieldCheckIcon className='text-[#b49bff] mr-[10px] h-5 w-5' />
-                <h1 className='button text-center text-white cursor-pointer'>Welcome to my Portfolio </h1></motion.a>
+                <h1 className='button text-center text-white cursor-pointer'> Download Resume </h1></motion.a> */}
+            <div className="flex space-x-4">
+            <motion.a
+                variants={slideInFromLeft(1)}
+                className="Welcome-box py-[9px] px-[7px] border border-[#7042f88b] opacity-[1] flex items-center"
+            >
+                <ArrowDownCircleIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
+                <h1 className="button text-center text-white cursor-pointer">Download Resume</h1>
+            </motion.a>
+
+            {/* <motion.a
+                variants={slideInFromLeft(1.5)}
+                className="Welcome-box py-[9px] px-[7px] border border-[#7042f88b] opacity-[1] flex items-center">
+                <ShieldCheckIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
+                <h1 className="button text-center text-white cursor-pointer">Download Resume</h1>
+            </motion.a> */}
+            </div>
         </div>
 
         <motion.div

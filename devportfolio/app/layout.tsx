@@ -27,7 +27,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.className} bg-[#000000] overflow-y-scroll overflow-x-hidden`}>
-                  <Navbar/>
+        {/* // className={`${geistSans.className} overflow-y-scroll overflow-x-hidden`}
+        // style={{ background: 'linear-gradient(to bottom,rgb(0, 0, 0),rgba(0, 0, 3, 0.82))' }}>
+        // className={`${geistSans.className} bg-gradient-to-b from-[#000000] to-[#1a1a1a] overflow-y-scroll overflow-x-hidden`}> */}
+
+        <Navbar/>
         {children}
       </body>
     </html>
