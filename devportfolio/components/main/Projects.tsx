@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
 
   return (
     <div
-      className="w-full h-full flex flex-col items-center justify-center relative gap-3 py-20"
+      className="w-full h-full flex flex-col items-center justify-center relative gap-3"
       id="projects">
       <StarryBackground />
        <motion.div
