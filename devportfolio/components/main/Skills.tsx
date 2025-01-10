@@ -3,6 +3,7 @@ import { Backend_skill, Frontend_skill, Full_stack, Other_skill } from '@/consta
 import React from 'react'
 import SkillDataProvider from '../sub/SkillDataProvider';
 import SkillText from '../sub/SkillText';
+import Image from 'next/image';
 
 const Skills = () => {
   return (
@@ -54,10 +55,13 @@ const Skills = () => {
         </div>
         <div className='w-full h-full absolute'>
             <div className='w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover'>
-            <img 
-            src="/gg5.jpg" 
-            alt="Black Hole" 
-            className="absolute inset-0 h-full w-full object-cover z-[1]"/>
+            <Image 
+                src="/gg5.jpg" 
+                alt="Black Hole" 
+                fill
+                className="object-cover z-[1]" 
+                />
+
             </div>
             {/* <video
             className='w-full h-auto'
