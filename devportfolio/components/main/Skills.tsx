@@ -3,6 +3,7 @@ import { Backend_skill, Frontend_skill, Full_stack, Other_skill } from '@/consta
 import React from 'react'
 import SkillDataProvider from '../sub/SkillDataProvider';
 import SkillText from '../sub/SkillText';
+import StarryBackground from './StarryBackground';
 // import Image from 'next/image';
 
 const Skills = () => {
@@ -13,6 +14,7 @@ const Skills = () => {
     className='flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden py-20'
     style={{transform: 'scale(1)'}}>
         <SkillText />
+        <StarryBackground/>
         <div className='flex flex-row justify-around flex-wrap mt-4 gap-10 items-center'>
             {Frontend_skill.map((image, index) => (
                 <SkillDataProvider
