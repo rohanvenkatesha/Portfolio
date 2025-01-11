@@ -11,6 +11,11 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Close the menu when a link is clicked
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <div className='w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10'>
       <div className='w-full h-full flex flex-row items-center justify-between m-auto px-[10px]'>
@@ -99,10 +104,10 @@ const Navbar = () => {
           isMenuOpen ? 'block' : 'hidden'
         } md:hidden absolute top-[65px] right-0 w-[200px] bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 text-gray-200 py-5 px-8 rounded-lg`}
       >
-        <a href='#skills' className='block py-2'>Skills</a>
-        <a href='#experience' className='block py-2'>Experience</a>
-        <a href='#projects' className='block py-2'>Projects</a>
-        <a href='#contact' className='block py-2'>Contact</a>
+        <a href='#skills' className='block py-2' onClick={closeMenu}>Skills</a>
+        <a href='#experience' className='block py-2' onClick={closeMenu}>Experience</a>
+        <a href='#projects' className='block py-2' onClick={closeMenu}>Projects</a>
+        <a href='#contact' className='block py-2' onClick={closeMenu}>Contact</a>
       </div>
     </div>
   );
