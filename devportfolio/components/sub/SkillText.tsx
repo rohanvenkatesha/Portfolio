@@ -15,7 +15,7 @@ export default function SkillText() {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="mb-8"
         >
-          <span className='text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500'> My Skills </span>
+          <span className='text-[40px] font-semibold cursor-pointer text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 hover:bg-gradient-to-l transition-all duration-1000'> My Skills </span>
         </motion.div>
       </div>
     );
