@@ -1,25 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
 
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900 */
 
+:root {
+  --title-1-color: #6a0dad; /* Define Purple color */
+  --title-2-color: #00bcd4; /* Define Cyan color */
+  --nav-1-color:  #e9d5ff; 
+  --nav-2-color:  #b5f3fc;
+  --border-color: rgba(112, 66, 248, 0.54);
+  --border-project-color: #2A0E61;
+  --arrow-color: #b49bff;
+  --hamburger-1-color:  #6b46c1;
+  --hamburger-2-color:  #4c51bf;
+  --hamburger-3-color: #00bcd4;
+}
+
+.montserrat-reg{
+  font-family: "Montserrat", serif;
+  font-style: normal;
+}
+
+.montserrat-hero {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
 .cursive {
   font-family: "Cedarville Cursive", cursive;
 }
-.Welcome-text {
-  background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.4)
-    ),
-    linear-gradient(90.01deg, #e59cff 0.01%, #ba9cff 50.01%, #9cb2ff 100%);
-  background-blend-mode: normal, screen;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+.hamburger-gradient {
+  background: linear-gradient(to right, var(--hamburger-1-color),var(--hamburger-2-color),var(--hamburger-3-color) ); /* Purple, Indigo, and Cyan gradient */
+  padding: 0.5rem; /* Equivalent to p-2 (0.5rem) */
+  border-radius: 9999px; /* Equivalent to rounded-full (fully rounded corners) */
 }
+
+/* #a48fff1f; */
 .Welcome-box {
   isolation: isolate;
   overflow: hidden;
@@ -34,27 +57,47 @@
   width: -moz-max-content;
   width: max-content;
   transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) box-shadow;
+
+  padding-top: 9px;          /* py-[9px] */
+  padding-bottom: 9px;       /* py-[9px] */
+  padding-left: 7px;         /* px-[7px] */
+  padding-right: 7px;        /* px-[7px] */
+  
+  border: 1px solid var(--border-color);  /* border-[#7042f88b] */
+  opacity: 1;  /* opacity-[1] */
 }
 
-.button-primary {
-  background: linear-gradient(
-      180deg,
-      rgba(60, 8, 126, 0) 0%,
-      rgba(60, 8, 126, 0.32) 100%
-    ),
-    rgba(113, 47, 255, 0.12);
-  box-shadow: inset 0 0 12px #bf97ff3d;
-}
-.button-primary:hover {
-  background: linear-gradient(
-      180deg,
-      rgba(60, 8, 126, 0) 0%,
-      rgba(60, 8, 126, 0.42) 100%
-    ),
-    rgba(113, 47, 255, 0.24);
-  box-shadow: inset 0 0 12px #bf97ff70;
+/* bg-gradient-to-r from-purple-500 to-cyan-500 */
+/* #6a0dad, #00bcd4 */
+.bg-gradient-right {
+  background: linear-gradient(to right, var(--title-1-color), var(--title-2-color)); /* Purple to Cyan gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: background 1s ease;
 }
 
+.bg-gradient-right:hover {
+  background: linear-gradient(to left, var(--title-1-color), var(--title-2-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Cyan to Purple gradient on hover */
+}
+
+.bg-gradient-right-light {
+  background: linear-gradient(to right, var(--nav-1-color), var(--nav-2-color) ); /* Purple to Cyan gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: background 1s ease;
+}
+
+.bg-gradient-right-light:hover {
+  background: linear-gradient(to left, var(--nav-1-color), var(--nav-2-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Cyan to Purple gradient on hover */
+}
 /* Hide scrollbar for IE, Edge and Firefox */
 .scrollbar-hidden {
   -ms-overflow-style: none; /* IE and Edge */
@@ -74,4 +117,16 @@ html {
   border-radius: 50%;
   border: 2rem solid var(--container-color);
 
+}
+
+.project-container {
+  position: relative;  /* Equivalent to 'relative' */
+  overflow: hidden;    /* Equivalent to 'overflow-hidden' */
+  border-radius: 0.5rem;  /* Equivalent to 'rounded-lg' (rounded corners) */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Equivalent to 'shadow-lg' (larger shadow) */
+  border: 1px solid var(--border-project-color); /* Equivalent to 'border-[#2A0E61]' */
+}
+
+.arrow-icon-color {
+  color: var(--arrow-color); /* Your desired color */
 }

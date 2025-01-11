@@ -12,7 +12,7 @@ interface Props {
 
 const ProjectCard = ({ src, title, description, githubLink }: Props) => {
   return (
-    <div className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] group">
+    <div className="project-container group">
       {/* Image with hover effect */}
       <Image
         src={src}
@@ -28,11 +28,11 @@ const ProjectCard = ({ src, title, description, githubLink }: Props) => {
           href={githubLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="Welcome-box py-[9px] px-[7px] border border-[#7042f88b] opacity-[1] flex items-center"
+          className="Welcome-box"
           whileHover={{ scale: 1.1 }} // Add animation on hover
           whileTap={{ scale: 0.95 }}  // Add tap effect
         >
-          <ArrowUpRightIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
+          <ArrowUpRightIcon className="arrow-icon-color mr-[10px] h-5 w-5" />
           <h1 className="button text-center text-white cursor-pointer">GitHub</h1>
         </motion.a>
       </div>
