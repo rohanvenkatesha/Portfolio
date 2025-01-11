@@ -7,7 +7,7 @@ export default function SkillText() {
     const isInView = useInView(ref);
   
     return (
-      <div className='montserrat-reg w-full h-auto flex flex-col items-center justify-center gap-3 pt-20'>
+      <div className='montserrat-reg w-full h-auto flex flex-col items-center justify-center gap-3'>
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -15,7 +15,7 @@ export default function SkillText() {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="mb-8"
         >
-          <h1 className='montserrat-hero text-[40px] font-semibold cursor-pointer bg-gradient-right'> My Skills </h1>
+          <h1 className='montserrat-hero text-[40px] font-semibold cursor-pointer bg-gradient-right mt-20 py-10'> My Skills </h1>
         </motion.div>
       </div>
     );

@@ -84,7 +84,7 @@ const Projects: React.FC = () => {
 
   return (
     <section
-      className=" montserrat-reg w-full h-full flex flex-col items-center justify-center relative gap-3 pt-20 py-20"
+      className=" montserrat-reg w-full h-auto flex flex-col items-center justify-center relative gap-3 py-20"
       id="projects"
       ref={ref}
     >

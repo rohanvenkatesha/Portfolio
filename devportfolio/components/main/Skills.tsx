@@ -11,7 +11,7 @@ const Skills = () => {
     // <div>Skills</div>
     <div 
     id='skills'
-    className="w-full h-full flex flex-col items-center justify-center relative gap-3 pt-20"
+    className="w-full h-full flex flex-col items-center justify-center relative gap-3 mt-10"
     style={{transform: 'scale(0.9)'}}>
         <SkillText />
         <StarryBackground/>
