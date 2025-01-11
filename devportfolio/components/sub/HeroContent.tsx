@@ -26,7 +26,7 @@ const HeroContent = () => {
             variants={slideInFromLeft(0.8)}
             className='text-lg text-gray-300 my-5 max-w-[600px]'>
                With 4+ years of experience in backend & API development, infrastructure systems engineering, and cloud & on-prem deployments, 
-               I'm a seasoned Full stack engineer with Passionate about building scalable software solutions and delivering results using modern technologies.
+               I am a seasoned Full stack engineer with Passionate about building scalable software solutions and delivering results using modern technologies.
             </motion.p>
             <div className="flex space-x-4">
             <motion.a
