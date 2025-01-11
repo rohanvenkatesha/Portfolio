@@ -12,7 +12,7 @@ const Skills = () => {
     <section 
     id='skills'
     className='flex flex-col items-center justify-center gap-3 w-full h-auto relative pt-20'
-    style={{transform: 'scale(1)'}}>
+    style={{transform: 'scale(0.9)'}}>
         <SkillText />
         <StarryBackground/>
         <div className='flex flex-row justify-around flex-wrap mt-4 gap-10 items-center'>
