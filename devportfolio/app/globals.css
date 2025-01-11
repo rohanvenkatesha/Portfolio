@@ -16,6 +16,9 @@
   --border-color: rgba(112, 66, 248, 0.54);
   --border-project-color: #2A0E61;
   --arrow-color: #b49bff;
+  --hamburger-1-color:  #6b46c1;
+  --hamburger-2-color:  #4c51bf;
+  --hamburger-3-color: #00bcd4;
 }
 
 .montserrat-reg{
@@ -31,6 +34,12 @@
 }
 .cursive {
   font-family: "Cedarville Cursive", cursive;
+}
+
+.hamburger-gradient {
+  background: linear-gradient(to right, var(--hamburger-1-color),var(--hamburger-2-color),var(--hamburger-3-color) ); /* Purple, Indigo, and Cyan gradient */
+  padding: 0.5rem; /* Equivalent to p-2 (0.5rem) */
+  border-radius: 9999px; /* Equivalent to rounded-full (fully rounded corners) */
 }
 
 /* #a48fff1f; */

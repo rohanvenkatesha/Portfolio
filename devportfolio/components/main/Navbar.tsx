@@ -75,7 +75,7 @@ const Navbar = () => {
         <div className='md:hidden flex items-center ml-auto'>
           <button
             onClick={toggleMenu}
-            className='bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 p-2 rounded-full'
+            className='hamburger-gradient'
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
