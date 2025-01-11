@@ -7,7 +7,7 @@ export default function SkillText() {
     const isInView = useInView(ref);
   
     return (
-      <div className='w-full h-auto flex flex-col items-center justify-center gap-3'>
+      <div className='w-full h-auto flex flex-col items-center justify-center gap-3 pt-20'>
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}

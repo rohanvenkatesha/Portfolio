@@ -94,7 +94,7 @@ const Projects: React.FC = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={isInView_title ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="mb-6"
+        className="mb-8"
       >
         <h1 className="text-[40px] font-semibold cursor-pointer text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 hover:bg-gradient-to-l transition-all duration-1000 py-10">
           My Projects
