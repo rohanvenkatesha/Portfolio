@@ -8,7 +8,7 @@ import { MdArrowUpward, MdArrowDownward } from 'react-icons/md'; // Import both 
 const Projects: React.FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const isInView_title = useInView(ref, { once: false });
+  const isInView_title = useInView(ref);
   const isInView_button = useInView(ref, { once: true });
 
   const [showMore, setShowMore] = useState(false); // State to toggle more/less
@@ -84,19 +84,19 @@ const Projects: React.FC = () => {
 
   return (
     <section
-      className="w-full h-full flex flex-col items-center justify-center relative gap-3 pt-20 py-20"
+      className=" montserrat-reg w-full h-full flex flex-col items-center justify-center relative gap-3 pt-20 py-20"
       id="projects"
       ref={ref}
     >
       <StarryBackground />
-      <motion.div
-        ref={ref}
-        initial={{ opacity: 0, y: 50 }}
-        animate={isInView_title ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="mb-8"
-      >
-        <h1 className="text-[40px] font-semibold cursor-pointer text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 hover:bg-gradient-to-l transition-all duration-1000 py-10">
+           <motion.div
+              ref={ref}
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView_title ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              className="mb-8"
+            >
+        <h1 className="montserrat-hero text-[40px] cursor-pointer bg-gradient-right py-10">
           My Projects
         </h1>
       </motion.div>
@@ -132,18 +132,18 @@ const Projects: React.FC = () => {
             handleScrollPosition(); // Store the current scroll position when toggling
             setShowMore(!showMore);
           }}
-          className="Welcome-box py-[9px] px-[7px] border border-[#7042f88b] opacity-[1] flex items-center mt-5"
+          className="Welcome-box mt-5"
           whileHover={{ scale: 1.1 }} // Add animation on hover
           whileTap={{ scale: 0.95 }}  // Add tap effect
         >
           {showMore ? (
             <>
-              <MdArrowUpward className="text-[#b49bff] mr-[10px] h-5 w-5" />
+              <MdArrowUpward className="arrow-icon-color mr-[10px] h-5 w-5" />
               <h1 className="button text-center text-white cursor-pointer">View Less</h1>
             </>
           ) : (
             <>
-              <MdArrowDownward className="text-[#b49bff] mr-[10px] h-5 w-5" />
+              <MdArrowDownward className="arrow-icon-color mr-[10px] h-5 w-5" />
               <h1 className="button text-center text-white cursor-pointer">View More</h1>
             </>
           )}

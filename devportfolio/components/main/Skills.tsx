@@ -9,9 +9,9 @@ import StarryBackground from './StarryBackground';
 const Skills = () => {
   return (
     // <div>Skills</div>
-    <section 
+    <div 
     id='skills'
-    className='flex flex-col items-center justify-center gap-3 w-full h-auto relative pt-20'
+    className="w-full h-full flex flex-col items-center justify-center relative gap-3 pt-20"
     style={{transform: 'scale(0.9)'}}>
         <SkillText />
         <StarryBackground/>
@@ -22,7 +22,8 @@ const Skills = () => {
                 src={image.Image}
                 width={image.width}
                 height={image.height}
-                index={index}/>
+                index={index}
+                skillName={image.name}/>
             ))}
         </div>
         <div className='flex flex-row justify-around flex-wrap mt-4 gap-10 items-center'>
@@ -32,7 +33,8 @@ const Skills = () => {
                 src={image.Image}
                 width={image.width}
                 height={image.height}
-                index={index}/>
+                index={index}
+                skillName={image.name}/>
             ))}
         </div>
         <div className='flex flex-row justify-around flex-wrap mt-4 gap-10 items-center'>
@@ -42,7 +44,8 @@ const Skills = () => {
                 src={image.Image}
                 width={image.width}
                 height={image.height}
-                index={index}/>
+                index={index}
+                skillName={image.name}/>
             ))}
         </div>
         <div className='flex flex-row justify-around flex-wrap mt-4 gap-10 items-center'>
@@ -52,19 +55,21 @@ const Skills = () => {
                 src={image.Image}
                 width={image.width}
                 height={image.height}
-                index={index}/>
+                index={index}
+                skillName={image.name}/>
             ))}
         </div>
-        {/* {/* <div className='w-full h-full absolute'>
-            <div className='w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover'>
-            <Image 
+        {/* <div className='w-full h-full absolute'>
+        <div className='w-full h-full z-[-10] opacity-30 bg-[#ffffff] relative flex items-center justify-center bg-cover'> */}
+
+            {/* <Image 
                 src="/gg5.jpg" 
                 alt="Black Hole" 
                 fill
                 className="object-cover z-[1]" 
-                />
-
-            </div> */}
+                /> */}
+            {/* </div>
+        </div>             */}
             {/* <video
             className='w-full h-auto'
             autoPlay
@@ -74,7 +79,7 @@ const Skills = () => {
             loop
             src='/blackhole.webm'/>
         </div> */}
-    </section>
+    </div>
   );
 };
 

@@ -1,9 +1,10 @@
 import React from "react";
-import { RxGithubLogo, RxChatBubble, RxLinkedinLogo } from "react-icons/rx";
+import { RxGithubLogo, RxLinkedinLogo } from "react-icons/rx";
 import { FaReact } from "react-icons/fa";  // React Icon
 import { SiNextdotjs } from "react-icons/si";  // Next.js Icon
 import { SiFramer } from "react-icons/si";  // Framer Motion Icon
 import { SiTypescript } from "react-icons/si";  // TypeScript Icon
+import { MdMail } from "react-icons/md";  // Mail Icon
 
 const Footer = () => {
   return (
@@ -12,7 +13,7 @@ const Footer = () => {
       style={{
         background: 'linear-gradient(to bottom, rgb(0, 0, 0), rgba(62, 9, 112, 0.53))',
       }}
-      className="w-full h-auto text-gray-200 shadow-lg p-[15px] relative bottom-0 left-0"
+      className=" montserrat-reg w-full h-auto text-gray-200 shadow-lg p-[15px] relative bottom-0 left-0"
     >
       <div className="w-full flex flex-col items-center justify-center m-auto">
         <div className="w-full h-full flex flex-row items-center justify-center gap-10 flex-wrap">
@@ -45,7 +46,7 @@ const Footer = () => {
                 href="mailto:rohanvenkatesha@gmail.com"
                 className="flex items-center"
               >
-                <RxChatBubble />
+                <MdMail />
                 <span className="text-[15px] ml-[6px]">Mail</span>
               </a>
             </p>

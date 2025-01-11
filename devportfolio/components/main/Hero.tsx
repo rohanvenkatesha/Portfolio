@@ -4,7 +4,7 @@ import HeroContent from '../sub/HeroContent'
 
 const Hero = () => {
   return (
-    <div id="about-me" className='relative flex flex-col h-auto w-full' >
+    <div id="about-me" className='relative flex flex-col h-auto w-full py-10' >
             <HeroContent />
     </div>
   );
