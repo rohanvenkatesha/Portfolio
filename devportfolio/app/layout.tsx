@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 // });
 
 export const metadata: Metadata = {
-  title: "Dev Portfolio",
+  title: "Portfolio | Rohan Venkatesha",
   description: "This is my portfolio",
 };
 

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import StarryBackground from './StarryBackground';
@@ -16,63 +16,63 @@ const Projects: React.FC = () => {
 
   const cards = [
     {
-      src: '/portf.png',
-      title: 'Project 1',
-      description: 'Description for project 1',
-      githubLink: 'https://github.com/rohanvenkatesha/MarketBasket-Apriori-Analysis',
+      src: '/portf.png', // Ensure you use unique images for each project
+      title: 'License Plate Detection and Recognition',
+      description: 'This project involves detecting and recognizing license plates from images using YOLOv5 for detection and PaddleOCR for recognition.',
+      skills: ['YOLOv5', 'PaddleOCR', 'Flask', 'Database Storage', 'API Integration'],
+      githubLink: 'https://github.com/rohanvenkatesha/License-Plate-Detection-using-Yolov5-and-Recognition-using-PaddleOCR',
     },
     {
-      src: '/portf.png',
-      title: 'Project 2',
-      description: 'Description for project 2',
-      githubLink: 'https://github.com/rohanvenkatesha/MarketBasket-Apriori-Analysis',
+      src: '/portf.png', // Update with unique project image
+      title: 'Retrieval Augmented Generation Chatbot',
+      description: 'This project involves analyzing PDFs and images, allowing users to ask content-based questions using Streamlit, LangChain, FAISS, and Google Generative AI.',
+      skills: ['Streamlit', 'LangChain', 'FAISS', 'Google Generative AI', 'Python', 'NLP'],      
+      githubLink: 'https://github.com/rohanvenkatesha/Retrieval-Augmented-Generation-RAG-Chatbot',
     },
     {
-      src: '/portf.png',
-      title: 'Project 3',
-      description: 'Description for project 3',
-      githubLink: 'https://github.com/rohanvenkatesha/MarketBasket-Apriori-Analysis',
+      src: '/portf.png', // Update with unique project image
+      title: ' Sarcasm Detection Using Natural Language Processing',
+      description: 'This project implements a sarcasm detection system using Flask and NLP, allowing users to input sentences and check for sarcasm. It also includes a text-to-speech (TTS) system using Google TTS for auditory feedback.',
+      skills: ['Flask', 'NLP', 'Google TTS', 'Python', 'Web Development', 'Text-to-Speech'],      
+      githubLink: 'https://github.com/rohanvenkatesha/Sarcasm-Detection-using-Natural-Language-Processing',
     },
     {
-      src: '/portf.png',
-      title: 'Project 4',
-      description: 'Description for project 4',
-      githubLink: 'https://github.com/rohanvenkatesha/MarketBasket-Apriori-Analysis',
+      src: '/portf.png', // Ensure you use unique images for each project
+      title: 'License Plate Detection and Recognition',
+      description: 'This project involves detecting and recognizing license plates from images using YOLOv5 for detection and PaddleOCR for recognition.',
+      skills: ['YOLOv5', 'PaddleOCR', 'Flask', 'Database Storage', 'API Integration'],
+      githubLink: 'https://github.com/rohanvenkatesha/License-Plate-Detection-using-Yolov5-and-Recognition-using-PaddleOCR',
     },
     {
-      src: '/portf.png',
-      title: 'Project 5',
-      description: 'Description for project 5',
-      githubLink: 'https://github.com/rohanvenkatesha/MarketBasket-Apriori-Analysis',
+      src: '/portf.png', // Ensure you use unique images for each project
+      title: 'License Plate Detection and Recognition',
+      description: 'This project involves detecting and recognizing license plates from images using YOLOv5 for detection and PaddleOCR for recognition.',
+      skills: ['YOLOv5', 'PaddleOCR', 'Flask', 'Database Storage', 'API Integration'],
+      githubLink: 'https://github.com/rohanvenkatesha/License-Plate-Detection-using-Yolov5-and-Recognition-using-PaddleOCR',
     },
     {
-      src: '/portf.png',
-      title: 'Project 6',
-      description: 'Description for project 6',
-      githubLink: 'https://github.com/rohanvenkatesha/MarketBasket-Apriori-Analysis',
+      src: '/portf.png', // Ensure you use unique images for each project
+      title: 'License Plate Detection and Recognition',
+      description: 'This project involves detecting and recognizing license plates from images using YOLOv5 for detection and PaddleOCR for recognition.',
+      skills: ['YOLOv5', 'PaddleOCR', 'Flask', 'Database Storage', 'API Integration'],
+      githubLink: 'https://github.com/rohanvenkatesha/License-Plate-Detection-using-Yolov5-and-Recognition-using-PaddleOCR',
     },
     {
-      src: '/portf.png',
-      title: 'Project 7',
-      description: 'Description for project 7',
-      githubLink: 'https://github.com/rohanvenkatesha/MarketBasket-Apriori-Analysis',
+      src: '/portf.png', // Ensure you use unique images for each project
+      title: 'License Plate Detection and Recognition',
+      description: 'This project involves detecting and recognizing license plates from images using YOLOv5 for detection and PaddleOCR for recognition.',
+      skills: ['YOLOv5', 'PaddleOCR', 'Flask', 'Database Storage', 'API Integration'],
+      githubLink: 'https://github.com/rohanvenkatesha/License-Plate-Detection-using-Yolov5-and-Recognition-using-PaddleOCR',
     },
-    {
-      src: '/portf.png',
-      title: 'Project 8',
-      description: 'Description for project 8',
-      githubLink: 'https://github.com/rohanvenkatesha/MarketBasket-Apriori-Analysis',
-    },
+    // Add more projects
   ];
 
   const displayedCards = showMore ? cards : cards.slice(0, 6); // Show 6 or all cards based on toggle
 
-  // Function to store the current scroll position when toggling between View More/View Less
   const handleScrollPosition = () => {
     setScrollPos(window.scrollY); // Store the current scroll position
   };
 
-  // Remove auto scroll logic to focus on toggle functionality
   useEffect(() => {
     if (!showMore) {
       window.scrollTo({
@@ -84,24 +84,22 @@ const Projects: React.FC = () => {
 
   return (
     <section
-      className=" montserrat-reg w-full h-auto flex flex-col items-center justify-center relative gap-3 py-20"
+      className="montserrat-reg w-full h-auto flex flex-col items-center justify-center relative gap-3 py-20 px-10"
       id="projects"
       ref={ref}
     >
       <StarryBackground />
-           <motion.div
-              ref={ref}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView_title ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="mb-8"
-            >
-        <h1 className="montserrat-hero text-[40px] cursor-pointer bg-gradient-right py-10">
-          My Projects
-        </h1>
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 50 }}
+        animate={isInView_title ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        className="mb-8"
+      >
+        <h1 className="montserrat-hero text-[40px] cursor-pointer bg-gradient-right py-10">Projects</h1>
       </motion.div>
 
-      <div className="h-full w-full grid grid-cols-1 md:grid-cols-3 gap-5 px-10">
+      <div className="h-full w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 px-10">
         {displayedCards.map((card, index) => (
           <motion.div
             key={index}
@@ -111,30 +109,30 @@ const Projects: React.FC = () => {
               duration: 0.8,
               type: 'spring',
               stiffness: 60,
-              delay: index * 0.3,
+              delay: index * 0.2,
             }}
             className="w-full"
           >
             <ProjectCard
               src={card.src}
               title={card.title}
-              description={card.description}
+              description={card.description} // Pass description as a prop
+              skills={card.skills}
               githubLink={card.githubLink}
             />
           </motion.div>
         ))}
       </div>
 
-      {/* Conditionally render the View More button based on visibility */}
-      {isInView_button && cards.length > 6 && ( // Show button only if the section is in view
+      {isInView_button && cards.length > 6 && (
         <motion.a
           onClick={() => {
-            handleScrollPosition(); // Store the current scroll position when toggling
+            handleScrollPosition();
             setShowMore(!showMore);
           }}
           className="Welcome-box mt-5"
-          whileHover={{ scale: 1.1 }} // Add animation on hover
-          whileTap={{ scale: 0.95 }}  // Add tap effect
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
         >
           {showMore ? (
             <>

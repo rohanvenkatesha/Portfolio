@@ -9,7 +9,7 @@ import StarryBackground from './StarryBackground';
 const Skills = () => {
   return (
     // <div>Skills</div>
-    <div 
+    <section 
     id='skills'
     className="w-full h-full flex flex-col items-center justify-center relative gap-3 mt-10"
     style={{transform: 'scale(0.9)'}}>
@@ -79,7 +79,7 @@ const Skills = () => {
             loop
             src='/blackhole.webm'/>
         </div> */}
-    </div>
+    </section>
   );
 };
 
