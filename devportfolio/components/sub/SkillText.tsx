@@ -15,7 +15,7 @@ export default function SkillText() {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="mb-8"
         >
-          <h1 className='montserrat-hero text-[40px] font-semibold cursor-pointer bg-gradient-right mt-20 py-10'> My Skills </h1>
+          <h1 className='montserrat-hero text-[40px] font-semibold cursor-pointer bg-gradient-right mt-20 py-10'>Skills</h1>
         </motion.div>
       </div>
     );

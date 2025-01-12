@@ -1,3 +1,4 @@
+import Experience from "@/components/main/Experience";
 import Footer from "@/components/main/Footer";
 import Hero from "@/components/main/Hero";
 import Projects from "@/components/main/Projects";
@@ -9,7 +10,8 @@ export default async function Home() {
     <main className="h-full w-full">
       <div className="flex flex-col gap-10">
       <Hero />
-      <Skills/>
+      <Skills />
+      {/* <Experience /> */}
       <Projects />
       <Footer/>
       </div>
