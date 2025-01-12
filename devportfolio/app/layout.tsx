@@ -3,7 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/main/Navbar";
 import StarryBackground from "@/components/main/StarryBackground";
-import Footer from "@/components/main/Footer";
+import ThemeSwitcher from "@/components/main/ThemeSwitcher";
+// import Footer from "@/components/main/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +33,8 @@ export default function RootLayout({
         
         <StarryBackground />
         <Navbar/>
+        <ThemeSwitcher/>
+        
         
         {children}
       </body>

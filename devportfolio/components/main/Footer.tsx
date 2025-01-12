@@ -10,9 +10,6 @@ const Footer = () => {
   return (
     <div
       id="contact"
-      style={{
-        background: 'linear-gradient(to bottom, rgb(0, 0, 0), rgba(62, 9, 112, 0.53))',
-      }}
       className=" montserrat-reg w-full h-auto text-gray-200 shadow-lg p-[15px] relative bottom-0 left-0"
     >
       <div className="w-full flex flex-col items-center justify-center m-auto">

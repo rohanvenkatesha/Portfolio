@@ -10,11 +10,11 @@ const HeroContent = () => {
     <motion.div 
     initial="hidden"
     animate="visible"
-    className='flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]'>
+    className='flex flex-row items-center justify-center px-20 mt-20 w-full z-[20]'>
         <div className='montserrat-reg h-full w-full flex flex-col gap-4 justify-center text-start'>
             <motion.div
             variants={slideInFromLeft(0.5)}
-            className='montserrat-hero flex flex-col gap-6 mt-6 text-5xl font-bold text-white max-w-[500px] w-auto h-auto'>
+            className='montserrat-hero flex flex-col gap-6 mt-6 text-5xl font-bold text-white max-w-[600px] w-auto h-auto'>
                 <span>
                 Hi, I am <br/>
                 <span className='cursor-pointer bg-gradient-right'> Rohan Venkatesha </span>

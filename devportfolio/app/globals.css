@@ -8,7 +8,37 @@
 /* // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 900 */
 
+/* Red to Yellow gradient for the Red color option */
+.red-theme {
+  background: linear-gradient(to right, red, yellow);
+}
+
+/* Green to Lime gradient for the Green color option */
+.green-theme {
+  background: linear-gradient(to right,  #0f9e4b, #14dbe2);
+}
+
+/* Blue gradient for the Blue color option */
+.blue-theme {
+  background: linear-gradient(to right,  #6a0dad, #00bcd4); /* Purple to Cyan gradient */
+}
+
+
 :root {
+--title-1-color: #6a0dad; /* Define Purple color */
+--title-2-color: #00bcd4; /* Define Cyan color */
+--nav-1-color:  #e9d5ff; 
+--nav-2-color:  #b5f3fc;
+--border-color: rgba(112, 66, 248, 0.54);
+--border-project-color: #2A0E61;
+--arrow-color: #b49bff;
+--hamburger-1-color:  #6b46c1;
+--hamburger-2-color:  #4c51bf;
+--hamburger-3-color: #00bcd4;
+--footer-color: rgba(62, 9, 112, 0.53);
+}
+
+[data-theme='blue']{
   --title-1-color: #6a0dad; /* Define Purple color */
   --title-2-color: #00bcd4; /* Define Cyan color */
   --nav-1-color:  #e9d5ff; 
@@ -19,7 +49,37 @@
   --hamburger-1-color:  #6b46c1;
   --hamburger-2-color:  #4c51bf;
   --hamburger-3-color: #00bcd4;
+  --footer-color: rgba(62, 9, 112, 0.53);
 }
+
+[data-theme='green'] {
+  --title-1-color: #0f9e4b; /* Define Purple color */
+  --title-2-color: #14dbe2; /* Define Cyan color */
+  --nav-1-color:  #31c06d; 
+  --nav-2-color:  #1dc8e2;
+  --border-color: rgba(23, 206, 93, 0.54);
+  --border-project-color: #0e6145;
+  --arrow-color: #18b8aa;
+  --hamburger-1-color:  #1ac5a0;
+  --hamburger-2-color:  #484dac;
+  --hamburger-3-color: #00bcd4;
+  --footer-color: rgba(9, 112, 18, 0.53);
+}
+
+[data-theme='red'] {
+  --title-1-color: red; /* Define Purple color */
+  --title-2-color: yellow; /* Define Cyan color */
+  --nav-1-color:  #df1e18b6; 
+  --nav-2-color:  #dfdb1a;
+  --border-color: rgba(224, 156, 29, 0.54);
+  --border-project-color: #61520e;
+  --arrow-color: #e08b0b;
+  --hamburger-1-color:  #c14646;
+  --hamburger-2-color:  #bfa44c;
+  --hamburger-3-color: #b2b427;
+  --footer-color: rgba(112, 96, 9, 0.53);
+}
+
 
 .montserrat-reg{
   font-family: "Montserrat", serif;
@@ -129,4 +189,101 @@ html {
 
 .arrow-icon-color {
   color: var(--arrow-color); /* Your desired color */
+}
+
+#contact {
+  background: linear-gradient(to bottom, rgb(0, 0, 0), var(--footer-color));
+}
+
+
+/* globals.css or a separate CSS file for buttons */
+/* globals.css or any relevant CSS file */
+/* Container to position the theme switcher button */
+/* Container to position the theme switcher button below the navbar */
+.theme-switcher-container {
+  position: fixed;
+  top: 80px; /* Adjust this to be below the navbar */
+  right: 20px; /* Default position on the right side */
+  z-index: 1000; /* Ensure it's above other content */
+  display: flex;
+  flex-direction: column; /* Stack dropdown vertically */
+}
+
+/* The button itself (small and round, background color transparent) */
+.theme-switcher-button {
+  background-color: transparent; /* Transparent background */
+  color: rgb(255, 0, 0); /* Default color for the icon initially (Red) */
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px; /* Adjust size of the button */
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+/* Change the background color on hover */
+.theme-switcher-button:hover {
+  background-color: rgb(255, 0, 0); /* Red background on hover */
+  color: white; /* Change icon color to white on hover */
+}
+
+/* Dropdown menu styling */
+.theme-dropdown {
+  position: absolute;
+  top: 40px; /* Positioned below the button */
+  left: 0;  /* Default position on the left side of the button */
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column; /* Stack the color options vertically */
+  gap: 10px; /* Space out the color circles */
+  padding: 10px;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Hidden initially */
+  transform: translateY(-20px); /* Start slightly above */
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+}
+
+/* When the dropdown is visible (for animation effect) */
+.theme-dropdown.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* Slide down the dropdown */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Styling for the color options (rounded circles) */
+.color-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Add a slight shadow */
+}
+
+/* Hover effect for the color circles */
+.color-option:hover {
+  transform: scale(1.1); /* Slightly enlarge the circle on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); /* Increase the shadow on hover */
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+  .theme-switcher-container {
+    left: 20px; /* Position on the left side on mobile */
+    right: unset; /* Unset the right property for mobile view */
+  }
+
+  /* Dropdown menu for mobile view */
+  .theme-dropdown {
+    left: unset; /* Unset left positioning */
+    right: 0; /* Position on the right side of the button */
+  }
+
+  /* Update the button size for mobile */
+  .theme-switcher-button {
+    font-size: 20px;
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
 }
