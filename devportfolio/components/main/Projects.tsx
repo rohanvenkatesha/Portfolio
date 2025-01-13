@@ -77,6 +77,7 @@ const Projects: React.FC = () => {
               description={card.description}
               skills={card.skills}
               githubLink={card.githubLink}
+              youtubeLink={card.youtubeLink ? card.youtubeLink : undefined} // Only pass youtubeLink if it exists
             />
           </motion.div>
         ))}

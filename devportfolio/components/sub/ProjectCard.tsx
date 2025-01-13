@@ -5,6 +5,7 @@ import { Card, CardHeader, CardBody, Link, Button } from "@nextui-org/react"; //
 import React, { useState } from "react";
 import { FaGithub } from 'react-icons/fa';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'; // Chevron Icons for toggle
+import { IoLogoYoutube } from 'react-icons/io'; // Import YouTube logo from react-icons
 
 // Helper function to generate a random color
 const getRandomColor = () => {
@@ -22,9 +23,10 @@ interface Props {
   description: string;
   skills: string[];
   githubLink: string;
+  youtubeLink?: string;
 }
 
-const ProjectCard = ({ src, title, description, skills, githubLink }: Props) => {
+const ProjectCard = ({ src, title, description, skills, githubLink, youtubeLink}: Props) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   // Toggle "Read more" / "Read less"
@@ -94,6 +96,29 @@ const ProjectCard = ({ src, title, description, skills, githubLink }: Props) => 
             </span>
           </button>
         )}
+
+      {/* Conditionally render YouTube link if available */}
+
+      {youtubeLink && (
+        <div className="mt-4 flex justify-center">
+          <motion.a
+            href={youtubeLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-start text-white text-xs font-semibold hover:text-red-600 transition-all duration-300"
+            whileHover={{ scale: 1.1 }} // Slight zoom on hover
+            whileTap={{ scale: 0.95 }}  // Scale down on tap
+          >
+            {/* YouTube Logo */}
+            <IoLogoYoutube className="mr-3 text-2xl text-red-500" />
+            
+            {/* Text */}
+            <span className="text-sm font-semibold tracking-wide">Watch Now</span>
+          </motion.a>
+        </div>
+      )}
+
+
       </div>
 
       {/* Render skills */}
@@ -112,6 +137,8 @@ const ProjectCard = ({ src, title, description, skills, githubLink }: Props) => 
           </span>
         ))}
       </div>
+
+
     </Card>
   );
 };

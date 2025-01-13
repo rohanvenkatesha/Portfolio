@@ -30,7 +30,8 @@ const cards = [
     {
       "src": "/portf.png",
       "title": "ClaimIT: Elevating Insurance and Simplifying Claims",
-      "description": "ClaimIT is an innovative platform aimed at revolutionizing the insurance industry by automating claims processing and enhancing customer satisfaction. Leveraging AI-driven solutions for real-time decision-making, accurate damage assessments, and seamless integration with existing insurer platforms, ClaimIT simplifies the insurance claim experience, reduces operational costs, and builds customer trust. Watch the trailer on YouTube: [YouTube Link].",
+      "description": "ClaimIT is an innovative platform aimed at revolutionizing the insurance industry by automating claims processing and enhancing customer satisfaction. Leveraging AI-driven solutions for real-time decision-making, accurate damage assessments, and seamless integration with existing insurer platforms, ClaimIT simplifies the insurance claim experience, reduces operational costs, and builds customer trust.",
+      "youtubeLink": "https://youtu.be/LUPpjWrDW38?feature=shared",
       "skills": ["AI", "Machine Learning", "Insurance Technology", "Python", "React.js", "Cloud Computing", "Automation", "Fraud Detection"],
       "githubLink": "https://github.com/rohanvenkatesha/ClaimIT"
     },    
