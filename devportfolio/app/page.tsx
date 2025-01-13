@@ -11,7 +11,7 @@ export default async function Home() {
       <div className="flex flex-col gap-10">
       <Hero />
       <Skills />
-      {/* <Experience /> */}
+      <Experience />
       <Projects />
       <Footer/>
       </div>
