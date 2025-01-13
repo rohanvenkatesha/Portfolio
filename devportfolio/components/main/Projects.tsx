@@ -4,6 +4,7 @@ import { motion, useInView } from 'framer-motion';
 import StarryBackground from './StarryBackground';
 import ProjectCard from '../sub/ProjectCard';
 import { MdArrowUpward, MdArrowDownward } from 'react-icons/md'; // Import both arrow-up and arrow-down icons
+import cards from '@/constants/Projectdata';
 
 const Projects: React.FC = () => {
   const ref = useRef(null);
@@ -13,61 +14,18 @@ const Projects: React.FC = () => {
 
   const [showMore, setShowMore] = useState(false); // State to toggle more/less
   const [scrollPos, setScrollPos] = useState(0); // State to store the scroll position
+  const [displayCount, setDisplayCount] = useState(6); // Track how many cards are displayed
 
-  const cards = [
-    {
-      src: '/portf.png', // Ensure you use unique images for each project
-      title: 'License Plate Detection and Recognition',
-      description: 'This project involves detecting and recognizing license plates from images using YOLOv5 for detection and PaddleOCR for recognition.',
-      skills: ['YOLOv5', 'PaddleOCR', 'Flask', 'Database Storage', 'API Integration'],
-      githubLink: 'https://github.com/rohanvenkatesha/License-Plate-Detection-using-Yolov5-and-Recognition-using-PaddleOCR',
-    },
-    {
-      src: '/portf.png', // Update with unique project image
-      title: 'Retrieval Augmented Generation Chatbot',
-      description: 'This project involves analyzing PDFs and images, allowing users to ask content-based questions using Streamlit, LangChain, FAISS, and Google Generative AI.',
-      skills: ['Streamlit', 'LangChain', 'FAISS', 'Google Generative AI', 'Python', 'NLP'],      
-      githubLink: 'https://github.com/rohanvenkatesha/Retrieval-Augmented-Generation-RAG-Chatbot',
-    },
-    {
-      src: '/portf.png', // Update with unique project image
-      title: ' Sarcasm Detection Using Natural Language Processing',
-      description: 'This project implements a sarcasm detection system using Flask and NLP, allowing users to input sentences and check for sarcasm. It also includes a text-to-speech (TTS) system using Google TTS for auditory feedback.',
-      skills: ['Flask', 'NLP', 'Google TTS', 'Python', 'Web Development', 'Text-to-Speech'],      
-      githubLink: 'https://github.com/rohanvenkatesha/Sarcasm-Detection-using-Natural-Language-Processing',
-    },
-    {
-      src: '/portf.png', // Ensure you use unique images for each project
-      title: 'License Plate Detection and Recognition',
-      description: 'This project involves detecting and recognizing license plates from images using YOLOv5 for detection and PaddleOCR for recognition.',
-      skills: ['YOLOv5', 'PaddleOCR', 'Flask', 'Database Storage', 'API Integration'],
-      githubLink: 'https://github.com/rohanvenkatesha/License-Plate-Detection-using-Yolov5-and-Recognition-using-PaddleOCR',
-    },
-    {
-      src: '/portf.png', // Ensure you use unique images for each project
-      title: 'License Plate Detection and Recognition',
-      description: 'This project involves detecting and recognizing license plates from images using YOLOv5 for detection and PaddleOCR for recognition.',
-      skills: ['YOLOv5', 'PaddleOCR', 'Flask', 'Database Storage', 'API Integration'],
-      githubLink: 'https://github.com/rohanvenkatesha/License-Plate-Detection-using-Yolov5-and-Recognition-using-PaddleOCR',
-    },
-    {
-      src: '/portf.png', // Ensure you use unique images for each project
-      title: 'License Plate Detection and Recognition',
-      description: 'This project involves detecting and recognizing license plates from images using YOLOv5 for detection and PaddleOCR for recognition.',
-      skills: ['YOLOv5', 'PaddleOCR', 'Flask', 'Database Storage', 'API Integration'],
-      githubLink: 'https://github.com/rohanvenkatesha/License-Plate-Detection-using-Yolov5-and-Recognition-using-PaddleOCR',
-    },
-    {
-      src: '/portf.png', // Ensure you use unique images for each project
-      title: 'License Plate Detection and Recognition',
-      description: 'This project involves detecting and recognizing license plates from images using YOLOv5 for detection and PaddleOCR for recognition.',
-      skills: ['YOLOv5', 'PaddleOCR', 'Flask', 'Database Storage', 'API Integration'],
-      githubLink: 'https://github.com/rohanvenkatesha/License-Plate-Detection-using-Yolov5-and-Recognition-using-PaddleOCR',
-    },
-    // Add more projects
-  ];
 
-  const displayedCards = showMore ? cards : cards.slice(0, 6); // Show 6 or all cards based on toggle
+  const handleViewMore = () => {
+    setDisplayCount((prevCount) => prevCount + 6); // Increase the display count by 6
+  };
+
+  const handleViewLess = () => {
+    setDisplayCount(6); // Reset the display count to 6
+  };
+
+  const displayedCards = cards.slice(0, displayCount); // Slice the cards to show based on count
 
   const handleScrollPosition = () => {
     setScrollPos(window.scrollY); // Store the current scroll position
@@ -99,7 +57,7 @@ const Projects: React.FC = () => {
         <h1 className="montserrat-hero text-[40px] cursor-pointer bg-gradient-right py-10">Projects</h1>
       </motion.div>
 
-      <div className="h-full w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 px-10">
+      <div className="h-full w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-10">
         {displayedCards.map((card, index) => (
           <motion.div
             key={index}
@@ -116,7 +74,7 @@ const Projects: React.FC = () => {
             <ProjectCard
               src={card.src}
               title={card.title}
-              description={card.description} // Pass description as a prop
+              description={card.description}
               skills={card.skills}
               githubLink={card.githubLink}
             />
@@ -127,14 +85,17 @@ const Projects: React.FC = () => {
       {isInView_button && cards.length > 6 && (
         <motion.a
           onClick={() => {
-            handleScrollPosition();
-            setShowMore(!showMore);
+            if (displayCount >= cards.length) {
+              handleViewLess(); // Reset to 6 if all cards are already displayed
+            } else {
+              handleViewMore(); // Otherwise, show more cards
+            }
           }}
           className="Welcome-box mt-5"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          {showMore ? (
+          {displayCount >= cards.length ? (
             <>
               <MdArrowUpward className="arrow-icon-color mr-[10px] h-5 w-5" />
               <h1 className="button text-center text-white cursor-pointer">View Less</h1>
@@ -150,5 +111,4 @@ const Projects: React.FC = () => {
     </section>
   );
 };
-
 export default Projects;

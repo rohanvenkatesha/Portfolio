@@ -24,7 +24,7 @@ const HeroContent = () => {
             </motion.div>
             <motion.p
             variants={slideInFromLeft(0.8)}
-            className='text-lg text-gray-300 my-5 max-w-[600px]'>
+            className='text-lg text-gray-300 my-5 max-w-[500px]'>
                With 4+ years of experience in backend & API development, infrastructure systems engineering, and cloud & on-prem deployments, 
                I am a seasoned Full stack engineer with Passionate about building scalable software solutions and delivering results using modern technologies.
             </motion.p>
@@ -48,8 +48,8 @@ const HeroContent = () => {
             <Image
             src='/home.jpg'
             alt='profile picture'
-            height={350}
-            width={350}
+            height={400}
+            width={400}
             className='home__img'
             />
         </motion.div>

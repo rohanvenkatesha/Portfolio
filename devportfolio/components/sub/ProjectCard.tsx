@@ -1,8 +1,10 @@
 import { ArrowUpRightIcon } from '@heroicons/react/24/outline'; // Import the icon
 import { motion } from "framer-motion"; // Import motion for animation
 import Image from "next/image";
-import { Card, CardHeader, CardBody } from "@nextui-org/react"; // Import NextUI Card components
+import { Card, CardHeader, CardBody, Link, Button } from "@nextui-org/react"; // Import NextUI Card components
 import React, { useState } from "react";
+import { FaGithub } from 'react-icons/fa';
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'; // Chevron Icons for toggle
 
 // Helper function to generate a random color
 const getRandomColor = () => {
@@ -29,7 +31,7 @@ const ProjectCard = ({ src, title, description, skills, githubLink }: Props) => 
   const toggleDescription = () => setIsExpanded(!isExpanded);
 
   return (
-    <Card className="py-2 group relative flex flex-col justify-between bg-gradient-to-r from-gray-800 to-gray-1000 bg-opacity-50 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <Card className="py-2 group relative flex flex-col justify-between bg-gradient-to-r from-gray-800 to-gray-1000 bg-opacity-50 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 mx-auto">
       {/* Card Header */}
       <CardHeader className="pb-0 pt-2 px-4 py-4 flex-col items-start">
         <p className="text-tiny uppercase font-semibold text-white">{title}</p>
@@ -42,22 +44,22 @@ const ProjectCard = ({ src, title, description, skills, githubLink }: Props) => 
           alt={title}
           width={1000}
           height={1000}
-          className="w-full rounded-lg mx-4"
+          className='w-full rounded-lg mx-4'
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black "></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black "></div>
 
         {/* GitHub Button Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-l from-transparent to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-transparent to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <motion.a
             href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="Welcome-box"
-            whileHover={{ scale: 1.1 }} // Add animation on hover
-            whileTap={{ scale: 0.95 }}  // Add tap effect
+            className="flex items-center justify-center p-2 bg-black text-white rounded-lg shadow-lg transition-all duration-300 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+            whileHover={{ scale: 1.1 }} // Scale on hover
+            whileTap={{ scale: 0.95 }}  // Scale on tap
           >
-            <ArrowUpRightIcon className="arrow-icon-color mr-[10px] h-5 w-5" />
-            <h1 className="button text-center text-white cursor-pointer">GitHub</h1>
+            <FaGithub className="mr-2 text-lg" /> {/* GitHub icon */}
+            <span className="text-sm font-semibold">GitHub</span> {/* Button text */}
           </motion.a>
         </div>
       </CardBody>
@@ -65,7 +67,7 @@ const ProjectCard = ({ src, title, description, skills, githubLink }: Props) => 
       {/* Project Description */}
       <div className="px-4 py-2 text-white text-sm">
         <p
-          className={`line-clamp-3 ${isExpanded ? 'line-clamp-none' : ''} transition-all duration-300`}
+          className={`line-clamp-2 ${isExpanded ? 'line-clamp-none' : ''} transition-all duration-300`}
           style={{ fontSize: '0.75rem' }} // Smaller text size
         >
           {description}
@@ -74,9 +76,22 @@ const ProjectCard = ({ src, title, description, skills, githubLink }: Props) => 
         {description.length > 100 && ( // Show Read More only if text is long
           <button
             onClick={toggleDescription}
-            className="text-blue-400 text-xs mt-1 hover:underline"
+            className="flex items-center text-white text-xs mt-1 group hover:text-blue-400 transition-all duration-300 relative"
           >
-            {isExpanded ? 'Read less' : 'Read more'}
+            <span
+              className={`mr-2 transition-all duration-300 group-hover:translate-x-2 ${
+                isExpanded ? 'rotate-180' : ''
+              }`}
+            >
+              {isExpanded ? (
+                <IoIosArrowUp className="text-sm transform rotate-180" /> // Up Chevron for Read Less
+              ) : (
+                <IoIosArrowDown className="text-sm" /> // Down Chevron for Read More
+              )}
+            </span>
+            <span className="font-semibold">
+              {isExpanded ? 'Read less' : 'Read more'}
+            </span>
           </button>
         )}
       </div>
@@ -86,10 +101,11 @@ const ProjectCard = ({ src, title, description, skills, githubLink }: Props) => 
         {skills.map((skill, index) => (
           <span
             key={index}
-            className="text-white text-xs py-1 px-2 rounded-full"
+            className="text-white text-xs py-1 px-3 rounded-full inline-block cursor-pointer transition-transform transform hover:scale-105"
             style={{
               backgroundColor: getRandomColor(), // Assign random color to each skill pill
               fontSize: '0.65rem', // Smaller text size for the skill pill
+              boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)', // Soft shadow for depth
             }}
           >
             {skill}
