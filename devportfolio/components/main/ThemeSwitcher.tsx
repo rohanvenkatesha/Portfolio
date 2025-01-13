@@ -1,11 +1,13 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FaSun } from "react-icons/fa"; // Importing sun icon from react-icons
 
 export default function ThemeSwitcher() {
   const [theme, setTheme] = useState<string>("red");
   const [isDropdownVisible, setDropdownVisible] = useState<boolean>(false);
-  const [navbarHeight, setNavbarHeight] = useState<number>(0);
+
+  const dropdownRef = useRef<HTMLDivElement>(null); // Ref for the dropdown
+  const buttonRef = useRef<HTMLButtonElement>(null); // Ref for the theme switcher button
 
   // Set the theme when the component mounts
   useEffect(() => {
@@ -14,12 +16,26 @@ export default function ThemeSwitcher() {
       setTheme(savedTheme);
       document.documentElement.setAttribute("data-theme", savedTheme);
     }
+  }, []);
 
-    // Calculate navbar height dynamically
-    const navbar = document.querySelector("nav");
-    if (navbar) {
-      setNavbarHeight(navbar.clientHeight);
-    }
+  // Close dropdown when clicking outside of the dropdown or button
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        dropdownRef.current && 
+        !dropdownRef.current.contains(e.target as Node) &&
+        buttonRef.current && 
+        !buttonRef.current.contains(e.target as Node)
+      ) {
+        setDropdownVisible(false); // Close dropdown if click is outside
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
   }, []);
 
   // Change the theme when the button is clicked
@@ -47,6 +63,7 @@ export default function ThemeSwitcher() {
   return (
     <div className="theme-switcher-container">
       <button
+        ref={buttonRef} // Attach the ref to the button
         className="theme-switcher-button"
         onClick={() => setDropdownVisible(!isDropdownVisible)}
         style={{
@@ -56,7 +73,10 @@ export default function ThemeSwitcher() {
         <FaSun size={24} color="white" /> {/* Sun icon in white color */}
       </button>
       {isDropdownVisible && (
-        <div className={`theme-dropdown ${isDropdownVisible ? "show" : ""}`}>
+        <div
+          ref={dropdownRef} // Attach the ref to the dropdown
+          className={`theme-dropdown ${isDropdownVisible ? "show" : ""}`}
+        >
           <div
             className="color-option red-theme"
             onClick={() => toggleTheme("red")}

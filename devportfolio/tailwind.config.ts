@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      animation: {
+        slowspin: "spin 3s linear infinite", // Adds the custom spin animation
+      },
     },
   },
   plugins: [],
