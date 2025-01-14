@@ -32,6 +32,8 @@ const HeroContent = () => {
             <motion.a
                 variants={slideInFromLeft(1)}
                 className="Welcome-box"
+                target="_blank"
+                rel="noopener noreferrer"
                 href='https://drive.google.com/file/d/1zf7aHGIk7Qymr7dP7ilbvY25KHc0bVIb/view?usp=drive_link'
                 whileHover={{ scale: 1.1 }} // Add animation on hover
                 whileTap={{ scale: 0.95 }}  // Add tap effect

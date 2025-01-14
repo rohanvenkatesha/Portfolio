@@ -8,15 +8,13 @@ import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'; // Chevron Icons 
 import { IoLogoYoutube } from 'react-icons/io'; // Import YouTube logo from react-icons
 
 // Helper function to generate a random color
-const getRandomColor = () => {
-  const letters = '0123456789ABCDEF';
-  let color = '#';
-  for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-};
-
+function getRandomColor(): string {
+  const r = Math.floor(Math.random() * 256); // Random red value [0, 255]
+  const g = Math.floor(Math.random() * 256); // Random green value [0, 255]
+  const b = Math.floor(Math.random() * 256); // Random blue value [0, 255]
+  const alpha = 0.2; // Set opacity to 0.2 for a dim effect
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`; // RGBA color with alpha for opacity
+}
 interface Props {
   src: string;
   title: string;

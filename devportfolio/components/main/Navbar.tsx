@@ -71,8 +71,8 @@ const Navbar = () => {
             <a href='#skills' className='cursor-pointer bg-gradient-right-light'>
               Skills
             </a>
-            <a href='#experience' className='cursor-pointer bg-gradient-right-light'>
-              Experience
+            <a href='#timeline' className='cursor-pointer bg-gradient-right-light'>
+              Timeline
             </a>
             <a href='#projects' className='cursor-pointer bg-gradient-right-light'>
               Projects
@@ -135,7 +135,7 @@ const Navbar = () => {
         <a href='#skills' className='block py-2' onClick={closeMenu}>
           Skills
         </a>
-        <a href='#experience' className='block py-2' onClick={closeMenu}>
+        <a href='#timeline' className='block py-2' onClick={closeMenu}>
           Experience
         </a>
         <a href='#projects' className='block py-2' onClick={closeMenu}>
