@@ -1,6 +1,6 @@
 // timelineData.ts
 
-export type TabKey = "Education" | "Experience" | "Awards and Activities";
+export type TabKey = "Education" | "Experience" | "Awards";
 
 export interface TimelineItem {
   date: string;
@@ -73,7 +73,7 @@ export const timelineData: Record<TabKey, TimelineItem[]> = {
       ],
     },
   ],
-  "Awards and Activities": [
+  "Awards": [
     {
       date: "Nov 2021 – Dec 2021",
       title: "Python Search Handler for SOP at Amazon Development Center",

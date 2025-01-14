@@ -316,7 +316,7 @@ html {
 
 /* styles.css */
 .tab-button {
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 0.5rem;
   /* border: 2px solid transparent; */
   border-radius: 9999px; /* for rounded full button */
   transition: all 0.3s ease-in-out;
