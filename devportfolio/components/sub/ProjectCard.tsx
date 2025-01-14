@@ -1,7 +1,7 @@
-import { ArrowUpRightIcon } from '@heroicons/react/24/outline'; // Import the icon
+// import { ArrowUpRightIcon } from '@heroicons/react/24/outline'; // Import the icon
 import { motion } from "framer-motion"; // Import motion for animation
 import Image from "next/image";
-import { Card, CardHeader, CardBody, Link, Button } from "@nextui-org/react"; // Import NextUI Card components
+import { Card, CardHeader, CardBody } from "@nextui-org/react"; // Import NextUI Card components
 import React, { useState } from "react";
 import { FaGithub } from 'react-icons/fa';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'; // Chevron Icons for toggle
@@ -38,15 +38,14 @@ const ProjectCard = ({ src, title, description, skills, githubLink, youtubeLink}
       </CardHeader>
 
       {/* Card Body with Image */}
-      <CardBody className="overflow-visible relative bg-transparent">
+      <CardBody className="overflow-hidden relative bg-transparent">
         <Image
           src={src}
           alt={title}
           width={1000}
           height={1000}
-          className='w-full rounded-lg mx-4'
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black "></div>
+          className='w-full rounded-[2rem] pl-4'/>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black"></div>
 
         {/* GitHub Button Overlay */}
         <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-transparent to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
