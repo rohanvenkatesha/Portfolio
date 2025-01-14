@@ -59,14 +59,14 @@ const CircularProgressBar = ({ value, maxValue }: { value: number; maxValue: num
 export default function Experience() {
   const [activeTab, setActiveTab] = useState<TabKey>("Education");
 
-  const tabs: TabKey[] = ["Education", "Experience", "Awards and Activities"];
+  const tabs: TabKey[] = ["Education", "Experience", "Awards"];
 
   const ref = useRef(null);
   const isInView_title = useInView(ref);
 
   return (
     <section
-      className="montserrat-reg w-full h-auto flex flex-col items-center justify-center relative gap-8 py-20 text-white"
+      className="montserrat-reg w-full h-auto flex flex-col items-center justify-center relative gap-10 py-20 text-white"
       id="timeline">
       <StarryBackground />
       <motion.div
@@ -82,7 +82,7 @@ export default function Experience() {
       </motion.div>
 
       {/* Tabs */}
-      <div className="flex gap-6 mb-8">
+      <div className="flex gap-5 sm:gap-5 mb-8">
         {tabs.map((tab) => (
           <button
             key={tab}
