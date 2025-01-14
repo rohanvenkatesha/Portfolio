@@ -313,3 +313,28 @@ html {
     padding: 5px; /* Adjust padding for smaller screens */
   }
 }
+
+/* styles.css */
+.tab-button {
+  padding: 0.5rem 1rem;
+  /* border: 2px solid transparent; */
+  border-radius: 9999px; /* for rounded full button */
+  transition: all 0.3s ease-in-out;
+}
+
+.tab-button-active {
+  background: linear-gradient(to right, var(--title-1-color), var(--title-2-color)); /* blue-500 to purple-600 */
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.tab-button-inactive {
+  color: #9ca3af; /* gray-400 */
+}
+
+.tab-button-inactive:hover {
+  background-color: #374151; /* gray-700 */
+  color: white;
+}
+

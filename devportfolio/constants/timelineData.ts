@@ -10,6 +10,7 @@ export interface TimelineItem {
   additionalDetails?: string;  // New field for additional details like who awarded
   gpa?: number;
   maxGpa?: number;
+  logo?:string;
 }
 
 export const timelineData: Record<TabKey, TimelineItem[]> = {
@@ -20,13 +21,15 @@ export const timelineData: Record<TabKey, TimelineItem[]> = {
       details: "Western Michigan University, USA",
       gpa: 3.75,
       maxGpa: 4,
+      logo:"/wmu.png",
     },
     {
       date: "Aug 2015 – Jul 2019",
       title: "B.E. in Computer Science & Engineering",
       details: "Visvesvaraya Technological University, India",
-      gpa: 7.76,
-      maxGpa: 10,
+      gpa: 3.2,
+      maxGpa: 4,
+      logo:"/vtu.png",
     },
   ],
   Experience: [

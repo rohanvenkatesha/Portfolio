@@ -1,5 +1,5 @@
 import Experience from "@/components/main/Experience";
-import Footer from "@/components/main/Footer";
+// import Footer from "@/components/main/Footer";
 import Hero from "@/components/main/Hero";
 import Projects from "@/components/main/Projects";
 import Skills from "@/components/main/Skills";
@@ -13,7 +13,7 @@ export default async function Home() {
       <Skills />
       <Experience />
       <Projects />
-      <Footer/>
+      {/* <Footer/> */}
       </div>
     </main>
   )
