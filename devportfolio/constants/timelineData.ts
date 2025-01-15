@@ -27,12 +27,23 @@ export const timelineData: Record<TabKey, TimelineItem[]> = {
       date: "Aug 2015 – Jul 2019",
       title: "B.E. in Computer Science & Engineering",
       details: "Visvesvaraya Technological University, India",
-      gpa: 3.2,
+      gpa: 3.3,
       maxGpa: 4,
       logo:"/vtu.png",
     },
   ],
   Experience: [
+    {
+      "date": "Aug 2023 – Present",
+      "title": "Student Manager (Part-time On Campus)",
+      "details": "Western Michigan University, Kalamazoo, Michigan, United States (On-site)",
+      "achievements": [
+        "Demonstrated strong team leadership and management skills by supervising daily operations and coordinating tasks effectively.",
+        "Enhanced interpersonal communication and critical thinking abilities by resolving student concerns and ensuring a smooth workflow.",
+        "Successfully managed time-sensitive projects, balancing academic responsibilities with part-time work."
+      ],
+      // "skills": ["Team Leadership", "Interpersonal Communication", "Team Management", "Time Management", "Critical Thinking"]
+    },    
     {
       date: "Aug 2021 – Mar 2023",
       title: "Senior Software Engineer",
@@ -41,6 +52,16 @@ export const timelineData: Record<TabKey, TimelineItem[]> = {
         "Spearheaded retail software projects, achieving 100% on-time delivery, resulting in $30K annual support cost savings and $50K revenue growth.",
         "Directed web apps and invoice management services for 50+ clients, serving 100K+ active users monthly, significantly enhancing customer lifetime value.",
         "Designed code reviews and automated testing pipelines, reducing deployment errors and production issues, accelerating timelines, saving 100+ hours per quarter and improving client retention.",
+      ],
+    },
+    {
+      "date": "Nov 2021 – Dec 2021",
+      "title": "CRC Senior Associate",
+      "details": "Amazon Development Center, India",
+      "achievements": [
+        "Crafted a Python search handler for SOP, reducing access time by 90%, while providing crucial moral support to overseas employees during the Covid-19 pandemic.",
+        "Provided on-call support, handling inquiries related to pay slips, leave requests, and document approval.",
+        "Utilized Kronos to support and address billing-related queries from Amazon employees."
       ],
     },
     {
@@ -66,20 +87,23 @@ export const timelineData: Record<TabKey, TimelineItem[]> = {
     {
       date: "Jul 2018 – Nov 2018",
       title: "Software Developer Intern",
-      details: "Xorail, India",
+      details: "Xorail - A Wabtec Corporation, India",
       achievements: [
         "Pioneered the 'Employee Attendance and Salary Management' app using Python, Flask API, and MySQL, reducing manual work for HR teams by 8 hours weekly.",
         "Revamped app performance with Python, eliminating data loss across 1,000+ records.",
       ],
     },
+    {
+      "date": "Aug 2017",
+      "title": "Intern",
+      "details": "LIVEWIRE India, Bengaluru, Karnataka, India (On-site)",
+      "achievements": [
+        "Gained expertise in Kali Linux and Metasploit framework, improving threat detection accuracy by 30%.",
+        "Strengthened digital asset protection strategies by 20% and increased phishing threat awareness by 15%."
+      ],
+    },    
   ],
   "Awards": [
-    {
-      date: "Nov 2021 – Dec 2021",
-      title: "Python Search Handler for SOP at Amazon Development Center",
-      details:
-        "Crafted a Python search handler for SOP at Amazon Development Center, Hyderabad, reducing access time by 95%, and provided crucial moral support to overseas employees during the COVID-19 pandemic.",
-    },
     {
       date: "Apr 2020",
       title: "Insta Award",
