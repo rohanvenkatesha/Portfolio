@@ -3,11 +3,13 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import StarryBackground from "./StarryBackground";
 import { timelineData, TabKey } from "@/constants/timelineData"; // Import data
+import PieChart from "../sub/PieChart";
+import RingChart from "../sub/PieChart";
 
 const CircularProgressBar = ({ value, maxValue }: { value: number; maxValue: number }) => {
   const percentage = (value / maxValue) * 100;
   const radius = 30;
-  const stroke = 4;
+  const stroke = 5;
   const circumference = 2 * Math.PI * radius;
   const [offset, setOffset] = useState(circumference);
   const ref = useRef<HTMLDivElement>(null);
@@ -23,13 +25,13 @@ const CircularProgressBar = ({ value, maxValue }: { value: number; maxValue: num
 
   return (
     <div ref={ref} className="flex items-center justify-start relative">
-      <svg width={80} height={80} viewBox="0 0 80 80" className="rotate-90">
+      <svg width={80} height={80} viewBox="0 0 80 80" className="rotate-180">
         {/* Background circle */}
         <circle
           cx="40"
           cy="40"
           r={radius}
-          stroke="gray"
+          stroke="#none"
           strokeWidth={stroke}
           fill="none"
         />
@@ -38,7 +40,7 @@ const CircularProgressBar = ({ value, maxValue }: { value: number; maxValue: num
           cx="40"
           cy="40"
           r={radius}
-          stroke="green"
+          stroke="#0BD11B"
           strokeWidth={stroke}
           fill="none"
           strokeDasharray={circumference}
@@ -49,7 +51,7 @@ const CircularProgressBar = ({ value, maxValue }: { value: number; maxValue: num
         />
       </svg>
       {/* GPA text in the center with smaller font size */}
-      <div className="absolute inset-0 flex items-center justify-center text-white font-semibold" style={{ fontSize: '0.8rem' }}>
+      <div className="absolute inset-0 flex items-center justify-center text-white font-semibold" style={{ fontSize: '1rem' }}>
         {value}
       </div>
     </div>
@@ -66,7 +68,7 @@ export default function Experience() {
 
   return (
     <section
-      className="montserrat-reg w-full h-auto flex flex-col items-center justify-center relative gap-10 py-20 text-white"
+      className="montserrat-reg w-full h-auto flex flex-col items-center justify-center relative gap-10 py-20 text-white mx-4"
       id="timeline">
       <StarryBackground />
       <motion.div
@@ -157,6 +159,8 @@ export default function Experience() {
     </motion.div>
   ))}
 </div>
+{/* Pie Chart */}
+{activeTab === "Experience" && <RingChart />} {/* Show pie chart only on the "Experience" tab */}
     </section>
   );
 }
