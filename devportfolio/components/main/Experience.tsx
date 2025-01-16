@@ -229,7 +229,7 @@ const ExpandCollapseCard = ({
             </div>
           )}
           {additionalDetails && (
-            <div className="text-sm italic text-gray-200 flex-1">{additionalDetails}</div>
+            <div className="text-sm italic text-gray-200 flex-1 md:block hidden">{additionalDetails}</div>
           )}
         </div>
       </motion.div>
