@@ -8,6 +8,7 @@ export interface TimelineItem {
   details: string;
   achievements?: string[];
   additionalDetails?: string;  // New field for additional details like who awarded
+  additionalImage?: string;
   gpa?: number;
   maxGpa?: number;
   logo?:string;
@@ -36,7 +37,7 @@ export const timelineData: Record<TabKey, TimelineItem[]> = {
     {
       "date": "Aug 2023 – Present",
       "title": "Student Manager (Part-time On Campus)",
-      "details": "Western Michigan University, Kalamazoo, Michigan, United States (On-site)",
+      "details": "Western Michigan University, Kalamazoo, Michigan, United States",
       "achievements": [
         "Demonstrated strong team leadership and management skills by supervising daily operations and coordinating tasks effectively.",
         "Enhanced interpersonal communication and critical thinking abilities by resolving student concerns and ensuring a smooth workflow.",
@@ -46,7 +47,7 @@ export const timelineData: Record<TabKey, TimelineItem[]> = {
     },    
     {
       date: "Aug 2021 – Mar 2023",
-      title: "Senior Software Engineer",
+      title: "Senior Software Engineer (Full-time)",
       details: "Adetrez Labs, India",
       achievements: [
         "Spearheaded retail software projects, achieving 100% on-time delivery, resulting in $30K annual support cost savings and $50K revenue growth.",
@@ -56,7 +57,7 @@ export const timelineData: Record<TabKey, TimelineItem[]> = {
     },
     {
       "date": "Nov 2021 – Dec 2021",
-      "title": "CRC Senior Associate",
+      "title": "CRC Senior Associate (Full-time)",
       "details": "Amazon Development Center, India",
       "achievements": [
         "Crafted a Python search handler for SOP, reducing access time by 90%, while providing crucial moral support to overseas employees during the Covid-19 pandemic.",
@@ -66,7 +67,7 @@ export const timelineData: Record<TabKey, TimelineItem[]> = {
     },
     {
       date: "Aug 2019 – Apr 2021",
-      title: "Systems Engineer",
+      title: "Systems Engineer (Full-time)",
       details: "Infosys Limited, India",
       achievements: [
         "Automated Oracle XStore deployment using Python and PowerShell, reducing setup time from 2 hours to 4 minutes, significantly improving operational efficiency.",
@@ -77,7 +78,7 @@ export const timelineData: Record<TabKey, TimelineItem[]> = {
     },
     {
       date: "Jan 2019 – May 2019",
-      title: "Systems Engineer Trainee",
+      title: "Systems Engineer Trainee (Full-time)",
       details: "Infosys Limited, India",
       achievements: [
         "Optimized the 'Foodzito' website's order management system to handle 1M+ concurrent transactions.",
@@ -86,7 +87,7 @@ export const timelineData: Record<TabKey, TimelineItem[]> = {
     },
     {
       date: "Jul 2018 – Nov 2018",
-      title: "Software Developer Intern",
+      title: "Software Developer Intern (Internship)",
       details: "Xorail - A Wabtec Corporation, India",
       achievements: [
         "Pioneered the 'Employee Attendance and Salary Management' app using Python, Flask API, and MySQL, reducing manual work for HR teams by 8 hours weekly.",
@@ -95,8 +96,8 @@ export const timelineData: Record<TabKey, TimelineItem[]> = {
     },
     {
       "date": "Aug 2017",
-      "title": "Intern",
-      "details": "LIVEWIRE India, Bengaluru, Karnataka, India (On-site)",
+      "title": "Intern (Internship)",
+      "details": "LIVEWIRE, India",
       "achievements": [
         "Gained expertise in Kali Linux and Metasploit framework, improving threat detection accuracy by 30%.",
         "Strengthened digital asset protection strategies by 20% and increased phishing threat awareness by 15%."
@@ -107,15 +108,17 @@ export const timelineData: Record<TabKey, TimelineItem[]> = {
     {
       date: "Apr 2020",
       title: "Insta Award",
-      details:
-        "Rohan is a budding talent. He is very committed and does his own analysis of requirements before starting the development. It is very important and rare quality one possesses as a fresher. His sense of responsibility is commendable. He is a pride of our team. Well done Rohan! Way to go....",
       additionalDetails:
-        "Awarded by Dayananda Rai U P (Senior Technology Architect at Infosys Technologies Ltd).",
+        "Rohan is a budding talent. He is very committed and does his own analysis of requirements before starting the development. It is very important and rare quality one possesses as a fresher. His sense of responsibility is commendable. He is a pride of our team. Well done Rohan! Way to go....",
+      details:
+        "Awarded by Dayananda Rai U P (Senior Technology Architect at Infosys)",
+      additionalImage: "/awards/infosys_insta_award.png"
     },
     {
       date: "Jan 2017",
       title: "Runner-up at Open Day Project Exhibition",
       details: "Issued by Industry Institute Interaction Cell, Visvesvaraya Technological University",
+      additionalImage: "/awards/openday.jpeg",
       additionalDetails: "INDUSTRY INSTITUTE INTERACTION CELL proudly presents this CERTIFICATE OF EXCELLENCE to Rohan V in recognition of their outstanding achievement in winning the SECOND PRIZE in the PROJECT EXHIBITION for their exceptional project titled 'System Hacking.'"
     },    
   ],
