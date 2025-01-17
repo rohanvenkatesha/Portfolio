@@ -1,53 +1,10 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import StarryBackground from "./StarryBackground";
 import { timelineData, TabKey } from "@/constants/timelineData";
-import PieChart from "../sub/PieChart";
-import RingChart from "../sub/PieChart";
-
-const CircularProgressBar = ({ value, maxValue }: { value: number; maxValue: number }) => {
-  const percentage = (value / maxValue) * 100;
-  const radius = 30;
-  const stroke = 5;
-  const circumference = 2 * Math.PI * radius;
-  const [offset, setOffset] = useState(circumference);
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref);
-
-  useEffect(() => {
-    if (isInView) {
-      setOffset(circumference - (percentage / 100) * circumference);
-    } else {
-      setOffset(circumference);
-    }
-  }, [isInView, percentage, circumference]);
-
-  return (
-    <div ref={ref} className="flex items-center justify-start relative">
-      <svg width={80} height={80} viewBox="0 0 80 80" className="rotate-180">
-        <circle cx="40" cy="40" r={radius} stroke="#none" strokeWidth={stroke} fill="none" />
-        <circle
-          cx="40"
-          cy="40"
-          r={radius}
-          stroke="#0BD11B"
-          strokeWidth={stroke}
-          fill="none"
-          strokeDasharray={circumference}
-          strokeDashoffset={offset}
-          style={{ transition: "stroke-dashoffset 1s ease-out" }}
-        />
-      </svg>
-      <div
-        className="absolute inset-0 flex items-center justify-center text-white font-semibold"
-        style={{ fontSize: "1rem" }}
-      >
-        {value}
-      </div>
-    </div>
-  );
-};
+import ExpandCollapseCard from "../sub/ExpandCollapseCard";
+import CircularProgressBar from "../sub/CircularProgressBar";
 
 const Experience = () => {
   const [activeTab, setActiveTab] = useState<TabKey>("Education");
@@ -62,14 +19,39 @@ const Experience = () => {
   const isInView_title = useInView(ref);
 
   const handleExperienceCardToggle = (index: number) => {
-    // When Experience card is clicked, set the corresponding index, or null if already open
     setExpandedExperienceCardIndex(expandedExperienceCardIndex === index ? null : index);
   };
 
   const handleAwardsCardToggle = (index: number) => {
-    // When Awards card is clicked, set the corresponding index, or null if already open
     setExpandedAwardsCardIndex(expandedAwardsCardIndex === index ? null : index);
   };
+
+  // Calculate total experience for fulltime, internship, and parttime
+  const calculateTotalExperience = () => {
+    let fullTimeYears = 0;
+    let internshipYears = 0;
+    let partTimeYears = 0;
+
+    timelineData["Experience"].forEach((item) => {
+      if (item.fullTimeYears) fullTimeYears += item.fullTimeYears;
+      if (item.internshipYears) internshipYears += item.internshipYears;
+      if (item.partTimeYears) partTimeYears += item.partTimeYears;
+    });
+
+    return {
+      fullTimeYears,
+      internshipYears,
+      partTimeYears,
+      totalExperience: fullTimeYears + internshipYears + partTimeYears,
+    };
+  };
+
+  const { fullTimeYears, internshipYears, partTimeYears, totalExperience } = calculateTotalExperience();
+
+  // Calculate width percentage for each section of the bar
+  const fullTimePercentage = (fullTimeYears / totalExperience) * 100;
+  const internshipPercentage = (internshipYears / totalExperience) * 100;
+  const partTimePercentage = (partTimeYears / totalExperience) * 100;
 
   return (
     <section
@@ -100,6 +82,78 @@ const Experience = () => {
         ))}
       </div>
 
+      {/* Experience Progress Bar (Single Line) */}
+      {activeTab === "Experience" && (
+        <div className="w-full max-w-4xl mb-8">
+          <div className="text-center text-lg text-white mb-2">
+            Total Experience: {totalExperience} years
+          </div>
+          {/* <div className="flex justify-between text-sm text-white mb-4">
+            <span>Fulltime: {fullTimeYears} years</span>
+            <span>Internship: {internshipYears} years</span>
+            <span>Parttime: {partTimeYears} years</span>
+          </div> */}
+          <motion.div
+             className="relative w-[90%] sm:w-[80%] md:w-[70%] mb-4 h-6 bg-gray-600 justify-center rounded-full mx-auto"
+            style={{
+              background: `linear-gradient(to right, 
+                #4e73df ${fullTimePercentage}%, 
+                #fbbd02 ${fullTimePercentage + internshipPercentage}%, 
+                #9b59b6 ${fullTimePercentage + internshipPercentage + partTimePercentage}%)`,
+            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            {/* Text for Fulltime, Internship, and Parttime */}
+            <motion.span
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-xs"
+              style={{ left: `${fullTimePercentage / 2}%` }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              {/* Fulltime */}
+            </motion.span>
+            <motion.span
+              className="absolute top-1/2 transform -translate-y-1/2 text-white text-xs"
+              style={{ left: `${fullTimePercentage + internshipPercentage / 2}%` }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              {/* Internship */}
+            </motion.span>
+            <motion.span
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-xs"
+              style={{ right: `${partTimePercentage / 2}%` }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              {/* Parttime */}
+            </motion.span>
+          </motion.div>
+
+          <div className="w-full mb-8 flex justify-center gap-5 items-center">
+        <div className="flex items-center gap-2">
+          <div className="w-5 h-5 bg-[#4e73df]"></div>
+          <span className="text-white text-sm">{fullTimeYears} years Fulltime</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-5 h-5 bg-[#fbbd02]"></div>
+          <span className="text-white text-sm">{internshipYears} years Internship</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-5 h-5 bg-[#9b59b6]"></div>
+          <span className="text-white text-sm">{partTimeYears} years Parttime</span>
+        </div>
+      </div>
+        </div>
+      )}
+
+      {/* Legend for Experience Categories */}
+
       {/* Timeline */}
       <div className="w-full max-w-4xl">
         {timelineData[activeTab].map((item, index) => (
@@ -128,25 +182,25 @@ const Experience = () => {
               {/* Expand/Collapse Logic */}
               {activeTab === "Experience" && (
                 <ExpandCollapseCard
-                  index={index} // Pass the index to identify the card
-                  isOpen={expandedExperienceCardIndex === index} // Check if this card is open
-                  setIsOpen={() => handleExperienceCardToggle(index)} // Toggle the card open/close
+                  index={index} 
+                  isOpen={expandedExperienceCardIndex === index} 
+                  setIsOpen={() => handleExperienceCardToggle(index)} 
                   details={item.details}
                   achievements={item.achievements}
                   additionalDetails={item.additionalDetails}
-                  additionalImage={item.additionalImage} // Passed image here
+                  additionalImage={item.additionalImage}
                 />
               )}
 
               {activeTab === "Awards" && (
                 <ExpandCollapseCard
-                  index={index} // Pass the index to identify the card
-                  isOpen={expandedAwardsCardIndex === index} // Check if this card is open
-                  setIsOpen={() => handleAwardsCardToggle(index)} // Toggle the card open/close
+                  index={index} 
+                  isOpen={expandedAwardsCardIndex === index} 
+                  setIsOpen={() => handleAwardsCardToggle(index)} 
                   details={item.details}
                   achievements={item.achievements}
                   additionalDetails={item.additionalDetails}
-                  additionalImage={item.additionalImage} // Passed image here
+                  additionalImage={item.additionalImage}
                 />
               )}
             </div>
@@ -160,79 +214,8 @@ const Experience = () => {
           </motion.div>
         ))}
       </div>
-
-      {/* Pie Chart */}
-      {activeTab === "Experience" && <RingChart />}
     </section>
   );
 }
 
 export default Experience;
-
-// Expand/Collapse Component for Experience and Awards
-const ExpandCollapseCard = ({
-  index,
-  isOpen,
-  setIsOpen,
-  details,
-  achievements,
-  additionalDetails,
-  additionalImage,
-}: {
-  index: number;
-  isOpen: boolean;
-  setIsOpen: () => void;
-  details: string;
-  achievements?: string[];
-  additionalDetails?: string;
-  additionalImage?: string;
-}) => {
-  return (
-    <div className="flex flex-col gap-2">
-      {/* Conditionally Render Expand/Collapse Button */}
-      {(achievements && achievements.length > 0) || additionalDetails || additionalImage ? (
-        <div className="flex justify-end mt-2">
-          <button
-            onClick={setIsOpen}
-            className="text-[10px] px-2 py-0.5 rounded-full bg-gray-700 hover:bg-gray-600 hover:text-white transition-all"
-          >
-            {isOpen ? "Collapse x" : "Description +"}
-          </button>
-        </div>
-      ) : null}
-
-      {/* Details */}
-      <motion.div
-        initial={{ opacity: 0, height: 0 }}
-        animate={isOpen ? { opacity: 1, height: "auto" } : { opacity: 0, height: 0 }}
-        className="overflow-hidden"
-      >
-        {achievements && achievements.length > 0 && (
-          <ul className="list-disc list-inside mt-2 pl-4 text-sm text-gray-200">
-            {achievements.map((achievement, i) => (
-              <li key={i} className="mb-2">
-                {achievement}
-              </li>
-            ))}
-          </ul>
-        )}
-
-        {/* Render Additional Details and Image side by side */}
-        <div className="mt-4 flex items-center gap-6">
-          {additionalImage && (
-            <div className="w-[300px] h-[200px]">
-              <img
-                src={additionalImage}
-                alt="Additional Details"
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-          )}
-          {additionalDetails && (
-            <div className="text-sm italic text-gray-200 flex-1 md:block hidden">{additionalDetails}</div>
-          )}
-        </div>
-      </motion.div>
-    </div>
-  );
-};
