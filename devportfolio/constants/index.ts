@@ -275,18 +275,18 @@ export const Web_Skills = [
       width: 60,
       height: 60,
     },
-    {
-      skill_name: "GitHub",
-      Image: "/icons/gitwhite.png",
-      width: 50,
-      height: 50,
-    },
-    {
-      skill_name: "Code Review",
-      Image: "/icons/codereview.png",
-      width: 60,
-      height: 60,
-    },
+    // {
+    //   skill_name: "GitHub",
+    //   Image: "/icons/gitwhite.png",
+    //   width: 50,
+    //   height: 50,
+    // },
+    // {
+    //   skill_name: "Code Review",
+    //   Image: "/icons/codereview.png",
+    //   width: 60,
+    //   height: 60,
+    // },
     {
       skill_name: "Jira",
       Image: "/icons/jira.png",
@@ -305,12 +305,12 @@ export const Web_Skills = [
       width: 60,
       height: 60,
     },
-    {
-      skill_name: "Mentorship",
-      Image: "/icons/mentorship.png",
-      width: 60,
-      height: 60,
-    },
+    // {
+    //   skill_name: "Mentorship",
+    //   Image: "/icons/mentorship.png",
+    //   width: 60,
+    //   height: 60,
+    // },
   ];
 
   export const AiMl_Skills = [
