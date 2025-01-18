@@ -1,4 +1,4 @@
-import Experience from "@/components/main/Experience";
+import Experience from "@/components/main/Timeline";
 // import Footer from "@/components/main/Footer";
 import Hero from "@/components/main/Hero";
 import Projects from "@/components/main/Projects";

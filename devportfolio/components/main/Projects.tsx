@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
 
   return (
     <section
-      className="montserrat-reg w-full h-auto flex flex-col items-center justify-center relative gap-3 py-20 px-10"
+      className="montserrat-reg w-full h-auto flex flex-col items-center justify-center relative gap-3 py-20 px-10 mx-auto"
       id="projects"
       ref={ref}
     >
@@ -54,7 +54,7 @@ const Projects: React.FC = () => {
         transition={{ duration: 0.8, ease: 'easeOut' }}
         className="mb-8"
       >
-        <h1 className="montserrat-hero text-[40px] cursor-pointer bg-gradient-right py-10">Projects</h1>
+        <h1 className="montserrat-hero text-[40px] font-semibold cursor-pointer bg-gradient-right py-10">Projects</h1>
       </motion.div>
 
       <div className="h-full w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-10">

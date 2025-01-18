@@ -1,4 +1,4 @@
-import { Backend_skill, Frontend_skill, Full_stack, Other_skill } from '@/constants';
+import { Web_Skills, Backend_skill, Db_Skills, Cloud_Skills, Programming_Skills, Agile_Skills, Analytical_Skills, AiMl_Skills } from '@/constants';
 // import { transform } from 'next/dist/build/swc/generated-native'
 import React from 'react'
 import SkillDataProvider from '../sub/SkillDataProvider';
@@ -16,16 +16,27 @@ const Skills = () => {
         <SkillText />
         <StarryBackground/>
         <div className='flex flex-row justify-around flex-wrap mt-4 gap-10 items-center'>
-            {Frontend_skill.map((image, index) => (
+            {Agile_Skills.map((image, index) => (
                 <SkillDataProvider
                 key={index}
                 src={image.Image}
                 width={image.width}
                 height={image.height}
                 index={index}
-                skillName={image.name}/>
+                skillName={image.skill_name}/>
             ))}
-        </div>
+            </div>
+        <div className='flex flex-row justify-around flex-wrap mt-4 gap-10 items-center'>
+            {Web_Skills.map((image, index) => (
+                <SkillDataProvider
+                key={index}
+                src={image.Image}
+                width={image.width}
+                height={image.height}
+                index={index}
+                skillName={image.skill_name}/>
+            ))}
+            </div>
         <div className='flex flex-row justify-around flex-wrap mt-4 gap-10 items-center'>
             {Backend_skill.map((image, index) => (
                 <SkillDataProvider
@@ -34,29 +45,62 @@ const Skills = () => {
                 width={image.width}
                 height={image.height}
                 index={index}
-                skillName={image.name}/>
+                skillName={image.skill_name}/>
             ))}
         </div>
         <div className='flex flex-row justify-around flex-wrap mt-4 gap-10 items-center'>
-            {Full_stack.map((image, index) => (
+            {Programming_Skills.map((image, index) => (
                 <SkillDataProvider
                 key={index}
                 src={image.Image}
                 width={image.width}
                 height={image.height}
                 index={index}
-                skillName={image.name}/>
+                skillName={image.skill_name}/>
             ))}
         </div>
         <div className='flex flex-row justify-around flex-wrap mt-4 gap-10 items-center'>
-            {Other_skill.map((image, index) => (
+            {Db_Skills.map((image, index) => (
                 <SkillDataProvider
                 key={index}
                 src={image.Image}
                 width={image.width}
                 height={image.height}
                 index={index}
-                skillName={image.name}/>
+                skillName={image.skill_name}/>
+            ))}
+        </div>
+        <div className='flex flex-row justify-around flex-wrap mt-4 gap-10 items-center'>
+            {Cloud_Skills.map((image, index) => (
+                <SkillDataProvider
+                key={index}
+                src={image.Image}
+                width={image.width}
+                height={image.height}
+                index={index}
+                skillName={image.skill_name}/>
+            ))}
+        </div>
+        <div className='flex flex-row justify-around flex-wrap mt-4 gap-10 items-center'>
+            {AiMl_Skills.map((image, index) => (
+                <SkillDataProvider
+                key={index}
+                src={image.Image}
+                width={image.width}
+                height={image.height}
+                index={index}
+                skillName={image.skill_name}/>
+            ))}
+        </div>
+        <div className='flex flex-row justify-around flex-wrap mt-4 gap-10 items-center'>
+            {Analytical_Skills.map((image, index) => (
+                <SkillDataProvider
+                key={index}
+                src={image.Image}
+                width={image.width}
+                height={image.height}
+                index={index}
+                skillName={image.skill_name}/>
             ))}
         </div>
         {/* <div className='w-full h-full absolute'>
