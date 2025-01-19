@@ -30,8 +30,8 @@ const StarryBackground: React.FC = () => {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.radius = Math.random() * 0.8 + 0.8; // Smaller stars
-        this.speedX = (Math.random() - 0.5);
-        this.speedY = (Math.random() - 0.5);
+        this.speedX = (Math.random() - 0.5) * 0.4;
+        this.speedY = (Math.random() - 0.5) * 0.4;
         this.opacity = Math.random() * 0.2 + 0.2; // Less opacity
       }
 
@@ -63,7 +63,7 @@ const StarryBackground: React.FC = () => {
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
         ctx.shadowBlur = 5;
-        ctx.shadowColor = "rgb(214, 29, 29)"; // White glow
+        ctx.shadowColor = "rgb(255, 255, 255)"; // White glow
         ctx.fill();
       }
     }

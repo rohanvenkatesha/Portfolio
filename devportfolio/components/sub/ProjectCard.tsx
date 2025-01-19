@@ -1,7 +1,7 @@
 // import { ArrowUpRightIcon } from '@heroicons/react/24/outline'; // Import the icon
 import { motion } from "framer-motion"; // Import motion for animation
 import Image from "next/image";
-import { Card, CardHeader, CardBody } from "@nextui-org/react"; // Import NextUI Card components
+import { Card, CardHeader, CardBody } from "@heroui/react"; // Import NextUI Card components
 import React, { useState } from "react";
 import { FaGithub } from 'react-icons/fa';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'; // Chevron Icons for toggle
@@ -31,12 +31,11 @@ const ProjectCard = ({ src, title, description, skills, githubLink, youtubeLink}
   const toggleDescription = () => setIsExpanded(!isExpanded);
 
   return (
-    <Card className="py-2 group relative flex flex-col justify-between bg-gradient-to-r from-gray-800 to-gray-1000 bg-opacity-50 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 mx-auto">
+    (<Card className=" py-2 group relative flex flex-col justify-between bg-gradient-to-r from-black/80 to-gray-1000 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 mx-auto">
       {/* Card Header */}
       <CardHeader className="pb-0 pt-2 px-4 py-4 flex-col items-start">
-        <p className="text-tiny uppercase font-semibold text-white">{title}</p>
+        <p className="text-tiny uppercase font-semibold text-gray-100">{title}</p>
       </CardHeader>
-
       {/* Card Body with Image */}
       <CardBody className="overflow-hidden relative bg-transparent">
         <Image
@@ -44,8 +43,8 @@ const ProjectCard = ({ src, title, description, skills, githubLink, youtubeLink}
           alt={title}
           width={1000}
           height={1000}
-          className='w-full rounded-[2rem] pl-4'/>
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black"></div>
+          className='w-[350px] rounded-lg mx-auto '/>
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black"></div> */}
 
         {/* GitHub Button Overlay */}
         <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-transparent to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -62,9 +61,8 @@ const ProjectCard = ({ src, title, description, skills, githubLink, youtubeLink}
           </motion.a>
         </div>
       </CardBody>
-
       {/* Project Description */}
-      <div className="px-4 py-2 text-white text-sm">
+      <div className="px-4 py-2 text-gray-300 text-sm">
         <p
           className={`line-clamp-2 ${isExpanded ? 'line-clamp-none' : ''} transition-all duration-300`}
           style={{ fontSize: '0.75rem' }} // Smaller text size
@@ -73,7 +71,7 @@ const ProjectCard = ({ src, title, description, skills, githubLink, youtubeLink}
         </p>
 
         {description.length > 100 && ( // Show Read More only if text is long
-          <button
+          (<button
             onClick={toggleDescription}
             className="flex items-center text-white text-xs mt-1 group hover:text-blue-400 transition-all duration-300 relative"
           >
@@ -83,15 +81,15 @@ const ProjectCard = ({ src, title, description, skills, githubLink, youtubeLink}
               }`}
             >
               {isExpanded ? (
-                <IoIosArrowUp className="text-sm transform rotate-180" /> // Up Chevron for Read Less
+                (<IoIosArrowUp className="text-sm transform rotate-180" />) // Up Chevron for Read Less
               ) : (
-                <IoIosArrowDown className="text-sm" /> // Down Chevron for Read More
+                (<IoIosArrowDown className="text-sm" />) // Down Chevron for Read More
               )}
             </span>
             <span className="font-semibold">
               {isExpanded ? 'Read less' : 'Read more'}
             </span>
-          </button>
+          </button>)
         )}
 
       {/* Conditionally render YouTube link if available */}
@@ -117,7 +115,6 @@ const ProjectCard = ({ src, title, description, skills, githubLink, youtubeLink}
 
 
       </div>
-
       {/* Render skills */}
       <div className="p-4 flex flex-wrap gap-2 mt-1">
         {skills.map((skill, index) => (
@@ -134,9 +131,7 @@ const ProjectCard = ({ src, title, description, skills, githubLink, youtubeLink}
           </span>
         ))}
       </div>
-
-
-    </Card>
+    </Card>)
   );
 };
 

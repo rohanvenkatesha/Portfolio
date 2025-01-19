@@ -164,7 +164,7 @@ const Experience = () => {
         {timelineData[activeTab].map((item, index) => (
           <motion.div
             key={index}
-            className="flex flex-row gap-6 mb-8 p-6 border-l-4 border-gray-300 rounded-lg shadow-lg bg-gradient-to-r from-gray-800 to-gray-1000"
+            className="flex flex-row gap-6 mb-8 p-6 border-l-4 border-gray-300 rounded-lg shadow-lg bg-gradient-to-r from-black/80 to-gray-1000"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.2 }}
