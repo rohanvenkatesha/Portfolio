@@ -30,8 +30,8 @@ const StarryBackground: React.FC = () => {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.radius = Math.random() * 0.8 + 0.8; // Smaller stars
-        this.speedX = (Math.random() - 0.5) * 0.4;
-        this.speedY = (Math.random() - 0.5) * 0.4;
+        this.speedX = (Math.random() - 0.5) * 0.3;
+        this.speedY = (Math.random() - 0.5) * 0.3;
         this.opacity = Math.random() * 0.2 + 0.2; // Less opacity
       }
 
