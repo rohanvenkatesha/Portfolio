@@ -323,8 +323,8 @@ export const Web_Skills = [
     {
       skill_name: "Computer Vision",
       Image: "/icons/vision.png",
-      width: 80,
-      height: 80,
+      width: 60,
+      height: 60,
     },
     {
       skill_name: "Scikit Learn",
@@ -335,8 +335,8 @@ export const Web_Skills = [
     {
       skill_name: "Keras",
       Image: "/icons/keras.png",
-      width: 60,
-      height: 60,
+      width: 50,
+      height: 50,
     },
     {
       skill_name: "Bigdata",
