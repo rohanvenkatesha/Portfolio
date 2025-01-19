@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Portfolio | Rohan Venkatesha",
-  description: "This is my portfolio",
+  description: "Welcome to my Portfolio",
 };
 
 export default function RootLayout({
@@ -33,10 +33,10 @@ export default function RootLayout({
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="/space2.mp4" type="video/mp4" />
+            <source src="/space2.webm" type="video/webm" />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute inset-0 bg-black bg-opacity-70 z-0"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
         </div>
 
         {/* Background Components */}
