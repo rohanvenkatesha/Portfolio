@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${inter.className} overflow-y-scroll overflow-x-hidden`}
-        // className={${inter.className}  bg-custom overflow-y-scroll overflow-x-hidden}
+        // className={'${inter.className}  bg-custom overflow-y-scroll overflow-x-hidden'}
       >
         {/* Video Background */}
         <div className="fixed top-0 left-0 w-full h-full -z-10">

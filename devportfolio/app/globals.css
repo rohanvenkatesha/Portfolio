@@ -8,7 +8,7 @@
 /* // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 900 */
 /* .bg-custom {
-  background-image: url('/space.mp4');
+  background-image: url('/gg1.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -80,9 +80,9 @@
   --border-color: rgba(224, 156, 29, 0.54);
   --border-project-color: #61520e;
   --arrow-color: #e08b0b;
-  --hamburger-1-color:  #c14646;
-  --hamburger-2-color:  #bfa44c;
-  --hamburger-3-color: #b2b427;
+  --hamburger-1-color:  rgba(247, 116, 8, 0.884);
+  --hamburger-2-color:   rgba(210, 182, 229, 0.568);
+  --hamburger-3-color:  rgb(153, 11, 248);
   --footer-color: rgba(112, 96, 9, 0.53);
 }
 

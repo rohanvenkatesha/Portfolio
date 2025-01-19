@@ -5,6 +5,7 @@ import { slideInFromLeft, slideInFromRight } from "@/utils/motion";
 import { ArrowDownCircleIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaHandPointDown } from "react-icons/fa";
 
 const HeroContent = () => {
   return (
@@ -32,15 +33,17 @@ const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-300 my-5 max-w-[500px]"
         >
-          With 4+ years of experience in backend & API development,
-          infrastructure systems engineering, and cloud & on-prem deployments,
-          I am a seasoned Full stack engineer with Passionate about building
-          scalable software solutions and delivering results using modern
-          technologies.
+With 4+ years of experience in backend & API development, infrastructure systems engineering, and cloud & on-prem deployments, 
+I am a skilled full-stack engineer passionate about creating scalable software solutions with modern technologies.
+        </motion.p>
+        <motion.p
+          variants={slideInFromLeft(0.9)}
+          className="text-lg text-gray-300 my-5 max-w-[500px]">
+            Wanna check out my Resume below ?
         </motion.p>
         <motion.div 
         className="flex space-x-4 gap-2 items-center"
-        variants={slideInFromLeft(1)}>
+        variants={slideInFromLeft(1.1)}>
           <motion.a
             // variants={slideInFromLeft(1)}
             className="Welcome-box flex items-center"
@@ -70,7 +73,7 @@ const HeroContent = () => {
             href="https://www.linkedin.com/in/rohan-venkatesha"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:text-white transition duration-300"
+            className="text-blue-500 hover:text-blue-500 transition duration-300"
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.95 }}>
           <FaLinkedin className="h-6 w-6" />

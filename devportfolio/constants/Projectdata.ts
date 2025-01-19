@@ -7,7 +7,7 @@ const cards = [
       githubLink: 'https://github.com/rohanvenkatesha/License-Plate-Detection-using-Yolov5-and-Recognition-using-PaddleOCR',
     },
     {
-      src: '/projectimages/railway.jpeg',
+      src: '/projectimages/railway.webp',
       "title": "Railway Reservation Flask Backend API Testing",
       "description": "This repository contains a Flask-based backend API for a railway reservation system. The API allows users to register, log in, view available trains, and reserve tickets. It demonstrates Flask integration with a MySQL database and is designed for testing purposes.",
       "skills": ["Flask", "REST API", "MySQL", "Backend Development", "API Testing"],

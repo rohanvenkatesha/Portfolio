@@ -31,10 +31,10 @@ const ProjectCard = ({ src, title, description, skills, githubLink, youtubeLink}
   const toggleDescription = () => setIsExpanded(!isExpanded);
 
   return (
-    (<Card className=" py-2 group relative flex flex-col justify-between bg-gradient-to-r from-black/80 to-gray-1000 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 mx-auto">
+    (<Card className="py-2 group relative flex flex-col justify-between bg-gradient-to-r from-gray-900 to-gray-1000 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 mx-auto">
       {/* Card Header */}
       <CardHeader className="pb-0 pt-2 px-4 py-4 flex-col items-start">
-        <p className="text-tiny uppercase font-semibold text-gray-100">{title}</p>
+        <p className="text-tiny font-semibold text-gray-100">{title}</p>
       </CardHeader>
       {/* Card Body with Image */}
       <CardBody className="overflow-hidden relative bg-transparent">
@@ -43,11 +43,11 @@ const ProjectCard = ({ src, title, description, skills, githubLink, youtubeLink}
           alt={title}
           width={1000}
           height={1000}
-          className='w-[350px] rounded-lg mx-auto '/>
-        {/* <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black"></div> */}
+          className='w-full rounded-lg mx-4'/>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black"></div>
 
         {/* GitHub Button Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-transparent to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-transparent via-black/20 to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <motion.a
             href={githubLink}
             target="_blank"
