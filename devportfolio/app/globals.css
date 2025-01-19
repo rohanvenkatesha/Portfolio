@@ -7,10 +7,16 @@
 
 /* // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 900 */
+/* .bg-custom {
+  background-image: url('/space.mp4');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
 
 /* Red to Yellow gradient for the Red color option */
 .red-theme {
-  background: linear-gradient(to right, red, yellow);
+  background: linear-gradient(to right,rgba(247, 116, 8, 0.884),  rgb(153, 11, 248));
 }
 
 /* Green to Lime gradient for the Green color option */
@@ -67,10 +73,10 @@
 }
 
 [data-theme='red'] {
-  --title-1-color: red; /* Define Purple color */
-  --title-2-color: yellow; /* Define Cyan color */
-  --nav-1-color:  #df1e18b6; 
-  --nav-2-color:  #dfdb1a;
+  --title-1-color: rgba(247, 116, 8, 0.884); /* Define Purple color */
+  --title-2-color: rgb(153, 11, 248); /* Define Cyan color */
+  --nav-1-color:  rgba(214, 131, 63, 0.884); 
+  --nav-2-color:  rgb(152, 0, 253);
   --border-color: rgba(224, 156, 29, 0.54);
   --border-project-color: #61520e;
   --arrow-color: #e08b0b;
@@ -182,12 +188,14 @@ html {
 
 } */
 
-.home__img {
+/* .home__img {
   /* width: 400px;
   height: 400px; */
-  border: px solid transparent;
-  border-radius: 50%; /* Keep the circle shape */
-}
+  /* border: px solid transparent; */
+  /* border-radius: 50%;  */
+  /* Keep the circle shape */
+/* } */
+
 
 
 .project-container {
@@ -203,7 +211,7 @@ html {
 }
 
 #contact {
-  background: linear-gradient(to bottom, rgb(0, 0, 0), var(--footer-color));
+  background: linear-gradient(to bottom, transparent, var(--footer-color));
 }
 
 .header-fixed {
@@ -338,3 +346,26 @@ html {
   color: white;
 }
 
+
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-border-animation {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  /* background: linear-gradient(90deg, #ff7eb3, #ff758c, #8a9eff, #42cdd3); */
+  background: linear-gradient(90deg, var(--title-1-color), var(--nav-1-color), var(--title-2-color), var(--nav-2-color));
+  background-size: 200% 200%;
+  animation: gradient-animation 6s infinite linear;
+}

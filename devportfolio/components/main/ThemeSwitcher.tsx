@@ -1,9 +1,10 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { FaSun } from "react-icons/fa"; // Importing sun icon from react-icons
+import { IoIosColorWand } from "react-icons/io";
 
 export default function ThemeSwitcher() {
-  const [theme, setTheme] = useState<string>("red");
+  const [theme, setTheme] = useState<string>("blue");
   const [isDropdownVisible, setDropdownVisible] = useState<boolean>(false);
 
   const dropdownRef = useRef<HTMLDivElement>(null); // Ref for the dropdown
@@ -50,13 +51,13 @@ export default function ThemeSwitcher() {
   const getButtonGradient = (selectedTheme: string) => {
     switch (selectedTheme) {
       case "red":
-        return "linear-gradient(to right, red, yellow)"; // Red to Yellow gradient
+        return "linear-gradient(to right ,rgba(247, 116, 8, 0.884),  rgb(153, 11, 248))"; // Red to Yellow gradient
       case "green":
         return "linear-gradient(to right, #0f9e4b,  #14dbe2)"; // Green to Lime gradient
       case "blue":
         return "linear-gradient(to right, #6a0dad, #00bcd4)"; // Purple to Cyan gradient
       default:
-        return "linear-gradient(to right, red, yellow)"; // Default to Red to Yellow gradient
+        return "linear-gradient(to right, #6a0dad, #00bcd4)"; // Default to Purple to Cyan gradient
     }
   };
 
@@ -70,7 +71,7 @@ export default function ThemeSwitcher() {
           background: getButtonGradient(theme), // Apply the gradient to the button
         }}
       >
-        <FaSun size={24} color="white" /> {/* Sun icon in white color */}
+        <IoIosColorWand size={24} color="white" /> {/* Sun icon in white color */}
       </button>
       {isDropdownVisible && (
         <div
