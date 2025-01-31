@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website! This site showcases my skills, professional timeline, and projects. It features seamless animations, responsive design, and is optimized for performance across devices.
 
-![Portfolio Preview](./preview.png)  
+![Portfolio Preview](./Portfolio/devportfolio/public/portolfio_preview.png)  
 
 ## Tech Stack
 
