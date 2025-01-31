@@ -1,36 +1,35 @@
-Portfolio Website
+# My Portfolio Website
 
-A responsive and visually engaging portfolio website built with TypeScript, Next.js, React, and Framer Motion. This project showcases my skills, professional timeline, and notable projects through seamless animations and optimized performance across devices.
+Welcome to my personal portfolio website! This site showcases my skills, professional timeline, and projects. It features seamless animations, responsive design, and is optimized for performance across devices.
 
-Features
+![Portfolio Preview](./preview.png)  
 
-Responsive Design: Works seamlessly on desktops, tablets, and mobile devices.
+## Tech Stack
 
-Animated Transitions: Smooth animations using Framer Motion for an interactive user experience.
+- **Framework:** Next.js
+- **Library:** React
+- **Animations:** Framer Motion
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Hosting:** Vercel
 
-Type Safety: Leveraging TypeScript for robust type checking and error prevention.
+## Features
 
-Optimized Performance: Fast loading times and efficient rendering for a smooth browsing experience.
+- **Responsive Design:** Adapts beautifully to all screen sizes.
+- **Smooth Animations:** Engaging transitions powered by Framer Motion.
+- **Optimized Performance:** Fast load times and efficient rendering.
+- **Type Safety:** Built with TypeScript for robust code quality.
 
-Tech Stack
+## Sections
 
-Framework: Next.js
+- **About Me:** A brief intro and background.
+- **Skills:** Technologies and tools I'm proficient with.
+- **Timeline:** A chronological display of my professional journey.
+- **Projects:** Highlighting some of my key works.
+- **Contact:** Ways to get in touch with me.
 
-Library: React
+## Deployment
 
-Animation: Framer Motion
-
-Language: TypeScript
+This project is optimized for deployment on Vercel. Simply connect your GitHub repository and deploy! For more details, visit [Vercel Documentation](https://vercel.com/docs).
 
 
-Usage
-
-Home: Overview of skills and a brief introduction.
-
-Timeline: Visual representation of the career journey.
-
-Projects: Detailed showcase of selected projects with links and descriptions.
-
-Deployment
-
-Easily deployable to platforms like Vercel, Netlify, or any static hosting service supporting Next.js.
