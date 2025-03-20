@@ -62,10 +62,11 @@ export const timelineData: Record<TabKey, TimelineItem[]> = {
     "title": "Senior Software Engineer (Full-time)",
     "details": "Adetrez Labs, India",
     "achievements": [
-      "Spearheaded retail software projects, achieving 100% on-time delivery, resulting in $30K annual support cost savings and $50K revenue growth.",
-      "Directed web apps and invoice management services for 50+ clients, serving 100K+ active users monthly, significantly enhancing customer lifetime value.",
-      "Designed code reviews and automated testing pipelines, reducing deployment errors and production issues, accelerating timelines, saving 100+ hours per quarter and improving client retention."
-    ],
+  "Optimized real-time object detection pipelines using YOLOv5 and OpenCV, slashing server requests by 70% with client-side caching.",
+  "Spearheaded cloud migration of 15+ applications to AWS and Azure, leveraging EC2, Lambda, and S3, cutting infrastructure costs by 30%.",
+  "Streamlined CI/CD pipelines using Jenkins, GitLab, Python scripts, and Terraform, reducing deployment time from 2 hours to 10 minutes.",
+  "Introduced structured code reviews, cutting deployment errors by 50% and saving 100+ hours per quarter."
+],
     "workType": "Full-time",
     "startDate": "Aug 2021",
     "partTimeYears": 0,
@@ -88,35 +89,36 @@ export const timelineData: Record<TabKey, TimelineItem[]> = {
     "fullTimeYears":0.1,
   },
   {
-    "date": "Aug 2019 – Apr 2021",
+    "date": "Jan 2019 – Apr 2021",
     "title": "Systems Engineer (Full-time)",
     "details": "Infosys Limited, India",
     "achievements": [
-      "Automated Oracle XStore deployment using Python and PowerShell, reducing setup time from 2 hours to 4 minutes, significantly improving operational efficiency.",
-      "Collaborated on software system design, contributing to increased client success rates and $300K quarterly revenue growth.",
-      "Enhanced team communication workflows for tracking real-time issues and resolution, minimizing project delays and elevating client feedback scores from 4.0 to 4.8 out of 5.",
-      "Streamlined legacy data migration with Python, improving reliability by 99% and reducing downtime by 80 hours per project."
+      "Developed scalable RESTful APIs handling 500K+ API calls per hour, integrating OAuth2 and JWT authentication, enhancing security by 40%.",
+      "Designed and deployed 12+ microservices using Python (FastAPI, Flask) and Node.js, maintaining 99.98% uptime while supporting 1M+ daily requests.",
+      "Accelerated API performance by 50% through Redis caching and database query optimizations, achieving response times under 100ms.",
+      "Awarded 'Insta Award' for exceptional development skills, recognized for reducing project turnaround time by 20% and delivering high-quality code as a fresher.",
+      "Enhanced backend logic and load balancing, reducing server response times from 200ms to 80ms, improving efficiency by 60%."
     ],
     "workType": "Full-time",
-    "startDate": "Aug 2019",
-    "partTimeYears": 0,
-    "internshipYears":0,
-    "fullTimeYears":1.8,
-  },
-  {
-    "date": "Jan 2019 – May 2019",
-    "title": "Systems Engineer Trainee (Internship)",
-    "details": "Infosys Limited, India",
-    "achievements": [
-      "Optimized the 'Foodzito' website's order management system to handle 1M+ concurrent transactions.",
-      "Coordinated with training peers to debug issues, improving problem resolution efficiency and increasing project throughput by completing 10 additional tasks per month."
-    ],
-    "workType": "Internship",
     "startDate": "Jan 2019",
     "partTimeYears": 0,
-    "internshipYears":0.4,
-    "fullTimeYears":0,
+    "internshipYears":0,
+    "fullTimeYears":2.3,
   },
+  // {
+  //   "date": "Jan 2019 – May 2019",
+  //   "title": "Systems Engineer Trainee (Internship)",
+  //   "details": "Infosys Limited, India",
+  //   "achievements": [
+  //     "Optimized the 'Foodzito' website's order management system to handle 1M+ concurrent transactions.",
+  //     "Coordinated with training peers to debug issues, improving problem resolution efficiency and increasing project throughput by completing 10 additional tasks per month."
+  //   ],
+  //   "workType": "Internship",
+  //   "startDate": "Jan 2019",
+  //   "partTimeYears": 0,
+  //   "internshipYears":0.4,
+  //   "fullTimeYears":0,
+  // },
   {
     "date": "Jul 2018 – Nov 2018",
     "title": "Software Developer Intern (Internship)",
