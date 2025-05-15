@@ -42,7 +42,23 @@ export const timelineData: Record<TabKey, TimelineItem[]> = {
   ],
 "Experience": [
   {
-    "date": "Aug 2023 – Present",
+    "date": "May 2025 – Present",
+    "title": "Full Stack Engineer",
+    "details": "Gabriel AI, United States",
+    "achievements": [
+      "Collaborating with cross-functional teams to build scalable digital solutions and responsive UIs using TypeScript and React/Next.js.",
+      "Contributing to technical architecture and early-stage development of an AI-powered SaaS platform using Django, FastAPI, Docker, and AWS (Lambda, S3).",
+      "Participating in design discussions, leveraging object-oriented design principles to ensure code efficiency, scalability, and maintainability across the stack.",
+      "Supporting seamless integration of AI voice agents and automation features to enhance user engagement and overall product capability."
+    ],
+    "workType": "Full-time",
+    "startDate": "May 2025",
+    "partTimeYears": 0,
+    "internshipYears": 0,
+    "fullTimeYears": 0.1
+  },
+  {
+    "date": "Aug 2023 – Apr 2025",
     "title": "Student Manager (Part-time On Campus)",
     "details": "Western Michigan University, Kalamazoo, Michigan, United States",
     "achievements": [
@@ -52,30 +68,29 @@ export const timelineData: Record<TabKey, TimelineItem[]> = {
     ],
     "workType": "Part-time",
     "startDate": "Aug 2023",
-    "partTimeYears": 1.5,
-    "internshipYears":0,
-    "fullTimeYears":0,
-
+    "partTimeYears": 1.8,
+    "internshipYears": 0,
+    "fullTimeYears": 0
   },
   {
     "date": "Aug 2021 – Mar 2023",
-    "title": "Senior Software Engineer (Full-time)",
+    "title": "Senior Software Engineer",
     "details": "Adetrez Labs, India",
     "achievements": [
-  "Optimized real-time object detection pipelines using YOLOv5 and OpenCV, slashing server requests by 70% with client-side caching.",
-  "Spearheaded cloud migration of 15+ applications to AWS and Azure, leveraging EC2, Lambda, and S3, cutting infrastructure costs by 30%.",
-  "Streamlined CI/CD pipelines using Jenkins, GitLab, Python scripts, and Terraform, reducing deployment time from 2 hours to 10 minutes.",
-  "Introduced structured code reviews, cutting deployment errors by 50% and saving 100+ hours per quarter."
-],
+      "Optimized real-time object detection pipelines with YOLOv5 and OpenCV, reducing over 70,000 daily server calls via client-side Redis caching.",
+      "Spearheaded cloud migration of 15+ applications to AWS and Azure, saving monthly costs by $1,200 and saving over $14,000 annually.",
+      "Streamlined CI/CD pipelines using Jenkins, GitLab, Python scripts, and Terraform, improving deployment time from over an hour to under 15 minutes.",
+      "Established structured code reviews and component-based design patterns, saving 100+ hours per quarter through effective collaboration and problem-solving."
+    ],
     "workType": "Full-time",
     "startDate": "Aug 2021",
     "partTimeYears": 0,
-    "internshipYears":0,
-    "fullTimeYears":1.7,
+    "internshipYears": 0,
+    "fullTimeYears": 1.7
   },
   {
     "date": "Nov 2021 – Dec 2021",
-    "title": "CRC Senior Associate (Full-time)",
+    "title": "CRC Senior Associate",
     "details": "Amazon Development Center, India",
     "achievements": [
       "Crafted a Python search handler for SOP, reducing access time by 90%, while providing crucial moral support to overseas employees during the Covid-19 pandemic.",
@@ -85,40 +100,25 @@ export const timelineData: Record<TabKey, TimelineItem[]> = {
     "workType": "Full-time",
     "startDate": "Nov 2021",
     "partTimeYears": 0,
-    "internshipYears":0,
-    "fullTimeYears":0.1,
+    "internshipYears": 0,
+    "fullTimeYears": 0.1
   },
   {
     "date": "Jan 2019 – Apr 2021",
-    "title": "Systems Engineer (Full-time)",
+    "title": "Systems Engineer",
     "details": "Infosys Limited, India",
     "achievements": [
-      "Developed scalable RESTful APIs handling 500K+ API calls per hour, integrating OAuth2 and JWT authentication, enhancing security by 40%.",
-      "Designed and deployed 12+ microservices using Python (FastAPI, Flask) and Node.js, maintaining 99.98% uptime while supporting 1M+ daily requests.",
-      "Accelerated API performance by 50% through Redis caching and database query optimizations, achieving response times under 100ms.",
-      "Awarded 'Insta Award' for exceptional development skills, recognized for reducing project turnaround time by 20% and delivering high-quality code as a fresher.",
-      "Enhanced backend logic and load balancing, reducing server response times from 200ms to 80ms, improving efficiency by 60%."
+      "Developed scalable RESTful APIs handling 500K+ requests per hour, ensuring security and access control using OAuth2 and JWT.",
+      "Designed and deployed 12+ microservices with Python (FastAPI, Flask, Django) and Node.js, maintaining 99.98% uptime and supporting 1M+ daily requests.",
+      "Accelerated API performance (200ms to 80ms) through load balancing, query tuning, and debugging to enhance system stability.",
+      "Recognized with the 'Insta Award' for driving development efficiency and delivering high-quality code early in the project lifecycle."
     ],
     "workType": "Full-time",
     "startDate": "Jan 2019",
     "partTimeYears": 0,
-    "internshipYears":0,
-    "fullTimeYears":2.3,
+    "internshipYears": 0,
+    "fullTimeYears": 2.3
   },
-  // {
-  //   "date": "Jan 2019 – May 2019",
-  //   "title": "Systems Engineer Trainee (Internship)",
-  //   "details": "Infosys Limited, India",
-  //   "achievements": [
-  //     "Optimized the 'Foodzito' website's order management system to handle 1M+ concurrent transactions.",
-  //     "Coordinated with training peers to debug issues, improving problem resolution efficiency and increasing project throughput by completing 10 additional tasks per month."
-  //   ],
-  //   "workType": "Internship",
-  //   "startDate": "Jan 2019",
-  //   "partTimeYears": 0,
-  //   "internshipYears":0.4,
-  //   "fullTimeYears":0,
-  // },
   {
     "date": "Jul 2018 – Nov 2018",
     "title": "Software Developer Intern (Internship)",
@@ -149,6 +149,15 @@ export const timelineData: Record<TabKey, TimelineItem[]> = {
   }
 ],
   "Awards": [
+    {
+      date: "Apr 2025",
+      title: "Celebration of Excellence",
+      additionalDetails:
+        "Celebration of Excellence in honor of your outstanding excellence, we hereby present 'Rohan Venkatesha' for contributing to the cultural diversity of the WMU community as a scholar and person.",
+      details:
+        "Issued by Office of Diversity and Inclusion, Western Michigan University",
+      additionalImage: "/awards/coe_rv.jpg"
+    },
     {
       date: "Apr 2020",
       title: "Insta Award",

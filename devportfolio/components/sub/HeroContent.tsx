@@ -33,13 +33,13 @@ const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-300 my-5 max-w-[500px]"
         >
-With 4+ years of experience in backend & API development, infrastructure systems engineering, and cloud & on-prem deployments, 
-I am a skilled full-stack engineer passionate about creating scalable software solutions with modern technologies.
+Full Stack & Backend Engineer with 4+ years of experience building scalable systems, AI-integrated platforms, and cloud-native apps. 
+Currently shaping next-gen AI products at Gabriel AI.
         </motion.p>
         <motion.p
           variants={slideInFromLeft(0.9)}
           className="text-lg text-gray-300 my-5 max-w-[500px]">
-            Wanna check out my Resume below ?
+          see my resume for the full story ?
         </motion.p>
         <motion.div 
         className="flex space-x-4 gap-2 items-center"
